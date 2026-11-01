@@ -72,7 +72,7 @@
   </aside>
   <aside class="know">
     <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why is there a Ground?</h3>
-    <p>Electricity only flows in a loop, like cars on a race track. Power leaves the micro:bit, goes through your part (a light, say) and has to get back home. <b>Ground</b> (GND or G) is the road home. If the track is broken, nothing moves and the light stays off. So every part needs power (<b>3V</b>) and ground (<b>GND</b>). Kit parts also have a third wire, <b>Signal</b>, which carries the message ("switch on!").</p>
+    <p>Electricity only flows in a loop. Think of a pump pushing water through a pipe, round a little water wheel and back to the pump. The micro:bit is the pump: power goes out through <b>3V</b>, through your part (a light, say) and back in through <b>GND</b>. If there's a gap in the loop, nothing moves and the light stays off. <b>GND</b> is short for "ground", a name borrowed from the wiring in houses, where the real earth is the way back. Your micro:bit isn't connected to the earth, so for us it just means "the way back". Kit parts also have a third wire, <b>Signal</b>, which carries the message ("switch on!").</p>
   </aside>
 </section>
 
@@ -302,6 +302,7 @@
     <li><b>Radio and Bluetooth:</b> they cannot be used in the same program. MakeCode removes the radio blocks if you add the Bluetooth extension.</li>
     <li><b>Pins on V1:</b> pins 3, 4, 6, 7, 9 and 10 are shared with the LED display, and pins 5 and 11 with buttons A and B. Avoid them while the lights or buttons are in use.</li>
     <li><b>Breakout board switch:</b> it sets the power for pins 9 to 16 (3.3V or 5V). Keep it on 3.3V; the micro:bit pins themselves only handle 3.3V.</li>
+    <li><b>GND is not earthing:</b> the micro:bit's GND is only the return path of the circuit. It is not the safety earth in mains wiring, which gives fault current a safe route into the ground instead of through a person. The micro:bit's 3V is too low to be a shock risk.</li>
   </ul>
 </section>
 
