@@ -36,6 +36,7 @@ footer { text-align:center; padding:30px 16px; font-size:.9rem; }
 .parts-list i { color:#556; }
 
 .know { border-left:3px solid var(--ink); padding:2px 14px; margin:14px 0; }
+.bulb { width:1.2em; height:1.2em; vertical-align:-.2em; margin-right:.2em; }
 .know h3 { margin:8px 0 4px; font-size:1.05rem; }
 
 @media print {

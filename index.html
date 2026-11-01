@@ -20,7 +20,7 @@
   <h2>1. What is a micro:bit?</h2>
   <div class="cards">
     <div class="card"><h3>A tiny computer</h3><p>It follows the instructions (code) that <em>you</em> write.</p></div>
-    <div class="card"><h3>It can sense</h3><p>Buttons, tilting, shaking, compass, temperature and light.</p></div>
+    <div class="card"><h3>It can sense</h3><p>Buttons, tilting, shaking, direction, temperature and light.</p></div>
     <div class="card"><h3>It can show</h3><p>Pictures, numbers and words on its 25 little lights.</p></div>
     <div class="card"><h3>It can talk</h3><p>It sends messages to other micro:bits by radio.</p></div>
   </div>
@@ -53,26 +53,26 @@
       </g>
       <!-- callouts -->
       <g font-size="14" fill="#222">
-        <text x="250" y="12">USB port (back, top edge)</text>
+        <text x="250" y="12">USB port (back)</text>
         <text x="10" y="300">Gold pins (edge connector)</text>
         <text x="105" y="190" text-anchor="middle" font-size="14">Button A</text><text x="295" y="190" text-anchor="middle" font-size="14">Button B</text>
         <text x="200" y="234" text-anchor="middle" font-size="14">25 LED lights</text>
       </g>
     </svg>
     <ol class="legend">
-      <li><b>USB port</b> (on the back, top edge): connects to a computer to load your code and give power.</li>
-      <li><b>Buttons A and B</b>: press them to make things happen. Press A+B together for a third input.</li>
+      <li><b>USB port</b> (on the back, top edge): plug a cable in here to send your code to the micro:bit and give it power.</li>
+      <li><b>Buttons A and B</b>: press them to make things happen. Pressing A and B together counts as a third button!</li>
       <li><b>LED grid</b>: 25 red lights in 5 rows of 5. You control each one.</li>
-      <li><b>Gold pins</b>: connect wires, crocodile clips and other parts. The three big rings (<b>0, 1, 2</b>) plus <b>3V</b> and <b>GND</b> are easy to clip onto.</li>
+      <li><b>Gold pins</b>: the micro:bit's "fingertips". Connect wires and crocodile clips here. The five big rings (<b>0, 1, 2, 3V</b> and <b>GND</b>) are the easiest to grab.</li>
     </ol>
   </div>
   <aside class="know">
-    <h3>Know it: what are the gold pins for?</h3>
-    <p>The gold strips along the bottom edge connect the micro:bit to the outside world. Each strip is a <b>pin</b>: a metal contact that can usually send a signal out (to turn on a light) or read one in (from a button or sensor). There are 25 of them (some are spare power and ground strips). Five have big rings (<b>0, 1, 2, 3V and GND</b>) so you can clip wires onto them.</p>
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> What are the gold pins for?</h3>
+    <p>Think of the pins as the micro:bit's fingertips. A pin can send a message out (switch a light on) or listen for one coming in (is a button pressed?). There are 25 gold strips. The five with big rings (<b>0, 1, 2, 3V</b> and <b>GND</b>) are the easy ones to clip onto.</p>
   </aside>
   <aside class="know">
-    <h3>Know it: why is there a Ground?</h3>
-    <p>Electricity only works in a loop. Power goes out of the micro:bit, through your part (a light, say) and has to come back again. <b>Ground</b> (GND or G) is the way back. If the loop is broken, nothing happens and the light stays off. That is why every part needs power (<b>3V</b>) and ground (<b>GND</b>). Kit parts also have a third wire, <b>Signal</b>, which carries the message.</p>
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why is there a Ground?</h3>
+    <p>Electricity only flows in a loop, like cars on a race track. Power leaves the micro:bit, goes through your part (a light, say) and has to get back home. <b>Ground</b> (GND or G) is the road home. If the track is broken, nothing moves and the light stays off. So every part needs power (<b>3V</b>) and ground (<b>GND</b>). Kit parts also have a third wire, <b>Signal</b>, which carries the message ("switch on!").</p>
   </aside>
 </section>
 
@@ -157,12 +157,12 @@
       <li><b>USB port</b>: plug in the cable to load code and give power.</li>
       <li><b>Reset button</b>: restarts your program.</li>
       <li><b>Battery socket</b>: plug in a battery pack to go cordless.</li>
-      <li><b>Processor</b>: the chip that runs your code.</li>
+      <li><b>Processor</b>: the brain chip that follows your code.</li>
       <li><b>Pin rings</b>: the gold rings you clip onto, the same pins as on the front.</li>
     </ol>
   </div>
   <p>Two tiny chips on the back are sensors: the <b>compass</b> knows which way is north, and the <b>accelerometer</b> feels tilting, shaking and falling.</p>
-  <p class="note">Your kit has the <b>V1</b> micro:bit, which has <b>no speaker and no microphone</b>. (The newer V2 has both.) It does have <b>Bluetooth</b> and <b>radio</b>.</p>
+  <p class="note">Your micro:bit is the <b>V1</b>. It has <b>no speaker and no microphone</b> (the newer V2 has both), so your kit's buzzer makes the sounds. It can talk by <b>Bluetooth</b> and <b>radio</b>.</p>
 </section>
 
 <section>
@@ -196,7 +196,7 @@
       <li>Go to <b>makecode.microbit.org</b> and start a new project.</li>
       <li>Build your program from blocks.</li>
       <li>Try it on the on-screen micro:bit.</li>
-      <li>Download it and copy it onto your real micro:bit.</li>
+      <li>Download it and copy it onto your real micro:bit. It shows up like a USB drive called MICROBIT.</li>
     </ol>
   </div>
 </section>
@@ -239,8 +239,8 @@
   </figure>
   <ol class="parts-list">
       <li><b>micro:bit</b>: The brain of everything. It runs your code.<br><i>You'll use it to run the program you write.</i></li>
-      <li><b>Breakout board</b>: Gives most micro:bit pins an easy plug.<br><i>You'll use it to connect all the parts below.</i></li>
-      <li><b>PIR sensor</b>: Detects movement nearby.<br><i>You'll use it to make an alarm that notices when someone walks past.</i></li>
+      <li><b>Breakout board</b>: Gives the micro:bit pins easy plugs.<br><i>You'll use it to connect all the parts below.</i></li>
+      <li><b>PIR sensor</b>: Notices when something warm, like you, moves nearby.<br><i>You'll use it to make an alarm that notices when someone walks past.</i></li>
       <li><b>Crash sensor</b>: A switch that notices a bump or press.<br><i>You'll use it to stop a robot when it hits a wall.</i></li>
       <li><b>Passive buzzer</b>: Plays the notes and beeps you program.<br><i>You'll use it to play a tune or sound an alarm.</i></li>
       <li><b>Green LED brick</b>: A bright light you switch on and off.<br><i>You'll use it to make a signal light.</i></li>
@@ -251,14 +251,14 @@
       <li><b>OLED display</b>: A tiny screen for text and simple pictures.<br><i>You'll use it to show scores or messages.</i></li>
       <li><b>Mini servo</b>: A motor that turns its arm to an angle you choose.<br><i>You'll use it to move a flag, a door or a robot arm.</i></li>
       <li><b>Jumper wires</b>: 3-wire cables that connect the parts to the board.<br><i>You'll use them to plug each part into the breakout board.</i></li>
-      <li><b>Potentiometer</b>: A turning knob that gives a value from low to high.<br><i>You'll use it to make a dimmer or a speed dial.</i></li>
+      <li><b>Potentiometer</b>: A turning knob. The micro:bit reads how far you have turned it.<br><i>You'll use it to make a dimmer or a speed dial.</i></li>
   </ol>
   <p class="note">Your kit also has a USB cable and a battery pack, which are not in this photo.</p>
 </section>
 
 <section>
   <h2>7. The breakout board</h2>
-  <p>The thin gold strips between the big rings on the micro:bit are too small to clip onto. The <b>breakout board</b> fixes that: the micro:bit slots into it, and most pins get an easy plug for your parts. Its nickname is <b>BoB</b>.</p>
+  <p>The micro:bit's gold strips are tiny and hard to clip onto. The <b>breakout board</b> fixes that: the micro:bit slots into it, and most pins get an easy plug for your parts. Its nickname is <b>BoB</b>.</p>
   <figure class="labelled narrow">
     <img src="images/breakout_board.webp" alt="Top view of the breakout board: a black socket at the top, yellow and blue signal plugs above red and black rows, two black sockets and a small power switch along the bottom.">
     <svg viewBox="0 0 800 800" aria-hidden="true">
@@ -285,12 +285,12 @@
       <li><b>Power switch</b> for pins 9 to 16: leave it on <b>3.3V</b> unless your teacher says otherwise.</li>
     </ol>
   <aside class="know">
-    <h3>Know it: why are the pins coloured?</h3>
-    <p>The colours are a code, so you do not mix them up. <b>Yellow or blue</b> = Signal (S), <b>red</b> = power (V, printed 3V3 or VCC on the board), <b>black</b> = Ground (G). Plug each cable in with its black wire on the black row. The yellow group (pins 0 to 8) always gives 3.3V. The blue group (pins 9 to 16) gets its power from the little switch, so keep it on 3.3V.</p>
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why are the pins coloured?</h3>
+    <p>The colours are a code so you don't mix things up. <b>Yellow or blue</b> = Signal (S): the message. <b>Red</b> = power (V; printed 3V3 or VCC on the board). <b>Black</b> = Ground (G): the way home. Plug each cable in with its black wire on the black row. The yellow group (pins 0 to 8) always gives 3.3V. The blue group (pins 9 to 16) gets its power from the little switch, so keep it on 3.3V.</p>
   </aside>
   <aside class="know">
-    <h3>Know it: what are the extra pins?</h3>
-    <p>Some parts send lots of information, not just on or off. Chips can chat using shared rules, like a language. The black sockets at the bottom of the board are for two of them: <b>I2C</b> (the screen plug; the OLED display uses it) and <b>SPI</b> (for add-ons you may try later). The pins on the sides are for add-ons too. You do not need any of these for your first projects.</p>
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> What are the extra pins?</h3>
+    <p>Some parts send lots of information, not just on or off. Chips can chat using shared rules, like a language. The black sockets at the bottom of the board are for two of these "languages": <b>I2C</b> (the screen plug, which the OLED display uses) and <b>SPI</b> (for add-ons you may try later). The pins on the sides are for add-ons too. You don't need any of these for your first projects.</p>
   </aside>
 </section>
 
