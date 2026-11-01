@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meet the micro:bit</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <img class="smiley" src="images/smiley_face_microbit.png" alt="A micro:bit showing a smiley face on its lights.">
+  <h1>Meet the <span>micro:bit</span></h1>
+  <p>A tiny computer you can program yourself. It fits in your hand and it's packed with lights, buttons and sensors.</p>
+</header>
+
+<main>
+
+<section>
+  <h2>1. What is a micro:bit?</h2>
+  <div class="cards">
+    <div class="card"><h3>A tiny computer</h3><p>It follows the instructions (code) that <em>you</em> write.</p></div>
+    <div class="card"><h3>It can sense</h3><p>Buttons, tilting, shaking, compass, temperature and light.</p></div>
+    <div class="card"><h3>It can show</h3><p>Pictures, numbers and words on its 25 little lights.</p></div>
+    <div class="card"><h3>It can talk</h3><p>It sends messages to other micro:bits by radio.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>2. The front of the board</h2>
+  <div class="two-col">
+    <svg viewBox="0 0 400 320" class="board" role="img" aria-label="Front of a micro:bit with labels">
+      <rect x="60" y="30" width="280" height="240" rx="18" fill="#fff" stroke="#1f2a44" stroke-width="3"/>
+      <!-- USB -->
+      <rect x="160" y="14" width="80" height="26" rx="4" fill="#b8bfcc"/>
+      <!-- LEDs -->
+      <g fill="#ff4d4d">
+        <circle cx="160" cy="100" r="9"/><circle cx="180" cy="100" r="9"/><circle cx="200" cy="100" r="9"/><circle cx="220" cy="100" r="9"/><circle cx="240" cy="100" r="9"/>
+        <circle cx="160" cy="125" r="9"/><circle cx="180" cy="125" r="9"/><circle cx="200" cy="125" r="9"/><circle cx="220" cy="125" r="9"/><circle cx="240" cy="125" r="9"/>
+        <circle cx="160" cy="150" r="9"/><circle cx="180" cy="150" r="9"/><circle cx="200" cy="150" r="9"/><circle cx="220" cy="150" r="9"/><circle cx="240" cy="150" r="9"/>
+        <circle cx="160" cy="175" r="9"/><circle cx="180" cy="175" r="9"/><circle cx="200" cy="175" r="9"/><circle cx="220" cy="175" r="9"/><circle cx="240" cy="175" r="9"/>
+        <circle cx="160" cy="200" r="9"/><circle cx="180" cy="200" r="9"/><circle cx="200" cy="200" r="9"/><circle cx="220" cy="200" r="9"/><circle cx="240" cy="200" r="9"/>
+      </g>
+      <!-- Buttons -->
+      <circle cx="105" cy="150" r="20" fill="#e8e8e8" stroke="#1f2a44" stroke-width="2"/><text x="105" y="157" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2a44">A</text>
+      <circle cx="295" cy="150" r="20" fill="#e8e8e8" stroke="#1f2a44" stroke-width="2"/><text x="295" y="157" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2a44">B</text>
+      <!-- Pins -->
+      <g fill="#f2c94c">
+        <circle cx="105" cy="250" r="14"/><circle cx="150" cy="250" r="14"/><circle cx="195" cy="250" r="14"/><circle cx="240" cy="250" r="14"/><circle cx="285" cy="250" r="14"/>
+      </g>
+      <g font-size="11" font-weight="700" fill="#1f2a44" text-anchor="middle">
+        <text x="105" y="254">0</text><text x="150" y="254">1</text><text x="195" y="254">2</text><text x="240" y="254">3V</text><text x="285" y="254">GND</text>
+      </g>
+      <!-- callouts -->
+      <g font-size="14" fill="#222">
+        <text x="250" y="12">USB port (back, top edge)</text>
+        <text x="10" y="300">Gold pins (edge connector)</text>
+        <text x="105" y="190" text-anchor="middle" font-size="14">Button A</text><text x="295" y="190" text-anchor="middle" font-size="14">Button B</text>
+        <text x="200" y="234" text-anchor="middle" font-size="14">25 LED lights</text>
+      </g>
+    </svg>
+    <ol class="legend">
+      <li><b>USB port</b> (on the back, top edge): connects to a computer to load your code and give power.</li>
+      <li><b>Buttons A and B</b>: press them to make things happen. Press A+B together for a third input.</li>
+      <li><b>LED grid</b>: 25 red lights in 5 rows of 5. You control each one.</li>
+      <li><b>Gold pins</b>: connect wires, crocodile clips and other parts. The three big rings (<b>0, 1, 2</b>) plus <b>3V</b> and <b>GND</b> are easy to clip onto.</li>
+    </ol>
+  </div>
+  <aside class="know">
+    <h3>Know it: what are the gold pins for?</h3>
+    <p>The gold strips along the bottom edge connect the micro:bit to the outside world. Each strip is a <b>pin</b>: a metal contact that can usually send a signal out (to turn on a light) or read one in (from a button or sensor). There are 25 of them (some are spare power and ground strips). Five have big rings (<b>0, 1, 2, 3V and GND</b>) so you can clip wires onto them.</p>
+  </aside>
+  <aside class="know">
+    <h3>Know it: why is there a Ground?</h3>
+    <p>Electricity only works in a loop. Power goes out of the micro:bit, through your part (a light, say) and has to come back again. <b>Ground</b> (GND or G) is the way back. If the loop is broken, nothing happens and the light stays off. That is why every part needs power (<b>3V</b>) and ground (<b>GND</b>). Kit parts also have a third wire, <b>Signal</b>, which carries the message.</p>
+  </aside>
+</section>
+
+<section>
+  <h2>3. The LED grid: finding your way around</h2>
+  <p>Every light has an address made of two numbers: <b>x</b> (across) and <b>y</b> (down). We write it <b>(x, y)</b>. Counting starts at <b>0</b>, not 1!</p>
+  <div class="two-col">
+    <svg viewBox="0 0 360 360" class="grid" role="img" aria-label="5 by 5 LED grid with coordinates, from (0,0) at the top left to (4,4) at the bottom right">
+<text x="80" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">0</text>
+<text x="24" y="86" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">0</text>
+<text x="140" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">1</text>
+<text x="24" y="146" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">1</text>
+<text x="200" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">2</text>
+<text x="24" y="206" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">2</text>
+<text x="260" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">3</text>
+<text x="24" y="266" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">3</text>
+<text x="320" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">4</text>
+<text x="24" y="326" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">4</text>
+<rect x="50" y="40" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="80" y="75" font-size="13" text-anchor="middle" fill="#1f2a44">(0,0)</text>
+<rect x="110" y="40" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="170" y="40" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="230" y="40" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="290" y="40" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="50" y="100" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="110" y="100" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="140" y="135" font-size="13" text-anchor="middle" fill="#1f2a44">(1,1)</text>
+<rect x="170" y="100" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="230" y="100" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="290" y="100" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="50" y="160" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="110" y="160" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="170" y="160" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="200" y="195" font-size="13" text-anchor="middle" fill="#1f2a44">(2,2)</text>
+<rect x="230" y="160" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="290" y="160" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="50" y="220" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="110" y="220" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="170" y="220" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="230" y="220" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="260" y="255" font-size="13" text-anchor="middle" fill="#1f2a44">(3,3)</text>
+<rect x="290" y="220" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="50" y="280" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="110" y="280" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="170" y="280" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="230" y="280" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="290" y="280" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="320" y="315" font-size="13" text-anchor="middle" fill="#1f2a44">(4,4)</text>
+<text x="24" y="24" font-size="14" font-weight="700" text-anchor="middle" fill="#ff4d4d">x →</text><text x="24" y="62" font-size="14" font-weight="700" text-anchor="middle" fill="#ff4d4d">y ↓</text></svg>
+    <div class="legend">
+      <ul>
+        <li><b>x</b> = how far <b>across</b> (left → right)</li>
+        <li><b>y</b> = how far <b>down</b> (top → bottom)</li>
+        <li><b>(0, 0)</b> is the <b>top-left</b> light.</li>
+        <li><b>(4, 4)</b> is the <b>bottom-right</b> light.</li>
+        <li><b>(2, 2)</b> is the <b>middle</b> light.</li>
+      </ul>
+      <div class="try"><b>Quick quiz:</b> Which light is (4, 0)? &nbsp; Which is (0, 4)?</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>4. The back of the board</h2>
+  <div class="two-col">
+    <figure class="labelled">
+      <img src="images/microbit_back.jpg" alt="The back of a micro:bit: a micro-USB socket, a reset button and a battery socket along the top edge, a large chip on the left and gold pin rings along the bottom.">
+      <svg viewBox="0 0 474 474" aria-hidden="true">
+        <line x1="195" y1="28" x2="228" y2="76" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="195" y1="28" x2="228" y2="76" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="228" cy="76" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<line x1="300" y1="28" x2="312" y2="86" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="300" y1="28" x2="312" y2="86" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="312" cy="86" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<line x1="425" y1="28" x2="396" y2="100" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="425" y1="28" x2="396" y2="100" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="396" cy="100" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<line x1="32" y1="110" x2="100" y2="152" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="110" x2="100" y2="152" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="152" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<line x1="225" y1="455" x2="225" y2="358" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="225" y1="455" x2="225" y2="358" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="225" cy="358" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<circle cx="195" cy="28" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="195" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">1</text>
+<circle cx="300" cy="28" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="300" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">2</text>
+<circle cx="425" cy="28" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="425" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">3</text>
+<circle cx="32" cy="110" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="32" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">4</text>
+<circle cx="225" cy="455" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="225" y="463" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">5</text>
+      </svg>
+    </figure>
+    <ol class="legend">
+      <li><b>USB port</b>: plug in the cable to load code and give power.</li>
+      <li><b>Reset button</b>: restarts your program.</li>
+      <li><b>Battery socket</b>: plug in a battery pack to go cordless.</li>
+      <li><b>Processor</b>: the chip that runs your code.</li>
+      <li><b>Pin rings</b>: the gold rings you clip onto, the same pins as on the front.</li>
+    </ol>
+  </div>
+  <p>Two tiny chips on the back are sensors: the <b>compass</b> knows which way is north, and the <b>accelerometer</b> feels tilting, shaking and falling.</p>
+  <p class="note">Your kit has the <b>V1</b> micro:bit, which has <b>no speaker and no microphone</b>. (The newer V2 has both.) It does have <b>Bluetooth</b> and <b>radio</b>.</p>
+</section>
+
+<section>
+  <h2>5. How do you tell it what to do?</h2>
+  <p>You write a program, then send it to the micro:bit. The website <a href="https://makecode.microbit.org/">makecode.microbit.org</a> is free and works in your browser. There is nothing to install.</p>
+  <p>Blocks are the easiest way to start: snap them together, like in Scratch. You can also write the same program as Python or JavaScript text.</p>
+  <figure class="labelled">
+    <img src="images/make_code_start_page.png" alt="The MakeCode editor: a micro:bit simulator on the left, a list of block types in the middle, and a workspace with two blocks, on start and forever, on the right.">
+    <svg viewBox="0 0 2560 1356" aria-hidden="true">
+      <line x1="1408" y1="128" x2="883" y2="77" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="1408" y1="128" x2="883" y2="77" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="883" cy="77" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<line x1="320" y1="1011" x2="384" y2="538" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="320" y1="1011" x2="384" y2="538" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="384" cy="538" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<line x1="1382" y1="717" x2="876" y2="698" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="1382" y1="717" x2="876" y2="698" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="876" cy="698" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<line x1="1446" y1="486" x2="1446" y2="335" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="1446" y1="486" x2="1446" y2="335" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="1446" cy="335" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<line x1="666" y1="1139" x2="512" y2="1261" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="666" y1="1139" x2="512" y2="1261" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="512" cy="1261" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<circle cx="1408" cy="128" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="1408" y="145" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">1</text>
+<circle cx="320" cy="1011" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="320" y="1028" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">2</text>
+<circle cx="1382" cy="717" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="1382" y="734" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">3</text>
+<circle cx="1446" cy="486" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="1446" y="503" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">4</text>
+<circle cx="666" cy="1139" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="666" y="1156" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">5</text>
+    </svg>
+  </figure>
+  <div class="two-col">
+    <ol class="legend">
+      <li><b>Blocks / JavaScript</b>: switch how you write your code (Python is in the menu).</li>
+      <li><b>The micro:bit on screen</b>: test your program here first.</li>
+      <li><b>Block types</b>: pick blocks from these colourful groups.</li>
+      <li><b>Workspace</b>: snap your blocks together here.</li>
+      <li><b>Download</b>: send your program to the real micro:bit.</li>
+    </ol>
+    <ol class="legend steps">
+      <li>Go to <b>makecode.microbit.org</b> and start a new project.</li>
+      <li>Build your program from blocks.</li>
+      <li>Try it on the on-screen micro:bit.</li>
+      <li>Download it and copy it onto your real micro:bit.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="kit">
+  <h2>6. What's in your kit?</h2>
+  <p>The Tinkercademy micro:bit Tinker Kit. Find each number on the photo, then read what the part does.</p>
+  <figure class="labelled">
+    <img src="images/kit_v1.webp" alt="The open kit box: a tray holding the sensor and output modules, the breakout board, a bag of wires with a servo, a potentiometer and a micro:bit.">
+    <svg viewBox="0 0 1680 1260" aria-hidden="true">
+      <line x1="470" y1="950" x2="560" y2="985" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="470" y1="950" x2="560" y2="985" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="560" cy="985" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="850" y1="280" x2="790" y2="400" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="850" y1="280" x2="790" y2="400" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="790" cy="400" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="135" y1="300" x2="200" y2="345" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="135" y1="300" x2="200" y2="345" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="200" cy="345" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="240" y1="270" x2="300" y2="335" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="240" y1="270" x2="300" y2="335" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="300" cy="335" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="335" y1="215" x2="395" y2="285" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="335" y1="215" x2="395" y2="285" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="395" cy="285" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="440" y1="170" x2="480" y2="250" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="440" y1="170" x2="480" y2="250" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="480" cy="250" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="520" y1="135" x2="565" y2="215" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="520" y1="135" x2="565" y2="215" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="565" cy="215" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="615" y1="100" x2="655" y2="180" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="615" y1="100" x2="655" y2="180" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="655" cy="180" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="430" y1="505" x2="430" y2="460" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="430" y1="505" x2="430" y2="460" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="430" cy="460" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="260" y1="640" x2="335" y2="545" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="260" y1="640" x2="335" y2="545" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="335" cy="545" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="575" y1="615" x2="515" y2="565" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="575" y1="615" x2="515" y2="565" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="515" cy="565" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="740" y1="720" x2="670" y2="815" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="740" y1="720" x2="670" y2="815" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="670" cy="815" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="480" y1="700" x2="540" y2="790" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="480" y1="700" x2="540" y2="790" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="540" cy="790" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="1040" y1="790" x2="985" y2="870" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="1040" y1="790" x2="985" y2="870" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="985" cy="870" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <circle cx="470" cy="950" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="470" y="968" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">1</text>
+      <circle cx="850" cy="280" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="850" y="298" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">2</text>
+      <circle cx="135" cy="300" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="135" y="318" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">3</text>
+      <circle cx="240" cy="270" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="240" y="288" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">4</text>
+      <circle cx="335" cy="215" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="335" y="233" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">5</text>
+      <circle cx="440" cy="170" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="440" y="188" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">6</text>
+      <circle cx="520" cy="135" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="520" y="153" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">7</text>
+      <circle cx="615" cy="100" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="615" y="118" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">8</text>
+      <circle cx="430" cy="505" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="430" y="523" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">9</text>
+      <circle cx="260" cy="640" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="260" y="658" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">10</text>
+      <circle cx="575" cy="615" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="575" y="633" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">11</text>
+      <circle cx="740" cy="720" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="740" y="738" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">12</text>
+      <circle cx="480" cy="700" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="480" y="718" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">13</text>
+      <circle cx="1040" cy="790" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="1040" y="808" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">14</text>
+    </svg>
+  </figure>
+  <ol class="parts-list">
+      <li><b>micro:bit</b>: The brain of everything. It runs your code.<br><i>You'll use it to run the program you write.</i></li>
+      <li><b>Breakout board</b>: Gives most micro:bit pins an easy plug.<br><i>You'll use it to connect all the parts below.</i></li>
+      <li><b>PIR sensor</b>: Detects movement nearby.<br><i>You'll use it to make an alarm that notices when someone walks past.</i></li>
+      <li><b>Crash sensor</b>: A switch that notices a bump or press.<br><i>You'll use it to stop a robot when it hits a wall.</i></li>
+      <li><b>Passive buzzer</b>: Plays the notes and beeps you program.<br><i>You'll use it to play a tune or sound an alarm.</i></li>
+      <li><b>Green LED brick</b>: A bright light you switch on and off.<br><i>You'll use it to make a signal light.</i></li>
+      <li><b>Red LED brick</b>: A bright light you switch on and off.<br><i>You'll use it to make a warning light.</i></li>
+      <li><b>Blue LED brick</b>: A bright light you switch on and off.<br><i>You'll use it to make a status light.</i></li>
+      <li><b>ADKeypad</b>: A pad of buttons that share a single pin.<br><i>You'll use it to build a game controller.</i></li>
+      <li><b>Soil moisture sensor</b>: Measures how wet soil is.<br><i>You'll use it to tell if a plant needs water.</i></li>
+      <li><b>OLED display</b>: A tiny screen for text and simple pictures.<br><i>You'll use it to show scores or messages.</i></li>
+      <li><b>Mini servo</b>: A motor that turns its arm to an angle you choose.<br><i>You'll use it to move a flag, a door or a robot arm.</i></li>
+      <li><b>Jumper wires</b>: 3-wire cables that connect the parts to the board.<br><i>You'll use them to plug each part into the breakout board.</i></li>
+      <li><b>Potentiometer</b>: A turning knob that gives a value from low to high.<br><i>You'll use it to make a dimmer or a speed dial.</i></li>
+  </ol>
+  <p class="note">Your kit also has a USB cable and a battery pack, which are not in this photo.</p>
+</section>
+
+<section>
+  <h2>7. The breakout board</h2>
+  <p>The thin gold strips between the big rings on the micro:bit are too small to clip onto. The <b>breakout board</b> fixes that: the micro:bit slots into it, and most pins get an easy plug for your parts. Its nickname is <b>BoB</b>.</p>
+  <figure class="labelled narrow">
+    <img src="images/breakout_board.webp" alt="Top view of the breakout board: a black socket at the top, yellow and blue signal plugs above red and black rows, two black sockets and a small power switch along the bottom.">
+    <svg viewBox="0 0 800 800" aria-hidden="true">
+      <line x1="730" y1="100" x2="600" y2="170" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="730" y1="100" x2="600" y2="170" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="600" cy="170" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="150" y1="440" x2="260" y2="500" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="150" y1="440" x2="260" y2="500" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="260" cy="500" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="600" y1="420" x2="520" y2="505" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="600" y1="420" x2="520" y2="505" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="520" cy="505" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="100" y1="730" x2="250" y2="650" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="100" y1="730" x2="250" y2="650" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="250" cy="650" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="430" y1="745" x2="430" y2="670" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="430" y1="745" x2="430" y2="670" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="430" cy="670" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="580" y1="750" x2="558" y2="655" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="580" y1="750" x2="558" y2="655" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="558" cy="655" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <circle cx="730" cy="100" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="730" y="110" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">1</text>
+      <circle cx="150" cy="440" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="150" y="450" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">2</text>
+      <circle cx="600" cy="420" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="600" y="430" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">3</text>
+      <circle cx="100" cy="730" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="100" y="740" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">4</text>
+      <circle cx="430" cy="745" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="430" y="755" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">5</text>
+      <circle cx="580" cy="750" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="580" y="760" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">6</text>
+    </svg>
+  </figure>
+    <ol class="legend cols">
+      <li><b>micro:bit slot</b>: push the micro:bit in here.</li>
+      <li><b>Plugs for pins 0 to 8</b>: for your parts.</li>
+      <li><b>Plugs for pins 9 to 16</b>: more places for your parts.</li>
+      <li><b>Screen plug</b>: the OLED display goes here.</li>
+      <li><b>Extra pins</b>: for add-ons you may try later.</li>
+      <li><b>Power switch</b> for pins 9 to 16: leave it on <b>3.3V</b> unless your teacher says otherwise.</li>
+    </ol>
+  <aside class="know">
+    <h3>Know it: why are the pins coloured?</h3>
+    <p>The colours are a code, so you do not mix them up. <b>Yellow or blue</b> = Signal (S), <b>red</b> = power (V, printed 3V3 or VCC on the board), <b>black</b> = Ground (G). Plug each cable in with its black wire on the black row. The yellow group (pins 0 to 8) always gives 3.3V. The blue group (pins 9 to 16) gets its power from the little switch, so keep it on 3.3V.</p>
+  </aside>
+  <aside class="know">
+    <h3>Know it: what are the extra pins?</h3>
+    <p>Some parts send lots of information, not just on or off. Chips can chat using shared rules, like a language. The black sockets at the bottom of the board are for two of them: <b>I2C</b> (the screen plug; the OLED display uses it) and <b>SPI</b> (for add-ons you may try later). The pins on the sides are for add-ons too. You do not need any of these for your first projects.</p>
+  </aside>
+</section>
+
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Compass:</b> the first time you use it, the micro:bit asks you to tilt it until every light is on (it scrolls TILT TO FILL SCREEN). That is calibration, not a fault.</li>
+    <li><b>Temperature:</b> the micro:bit reads its own chip, so the number is only a rough guide to the room.</li>
+    <li><b>Radio and Bluetooth:</b> they cannot be used in the same program. MakeCode removes the radio blocks if you add the Bluetooth extension.</li>
+    <li><b>Pins on V1:</b> pins 3, 4, 6, 7, 9 and 10 are shared with the LED display, and pins 5 and 11 with buttons A and B. Avoid them while the lights or buttons are in use.</li>
+    <li><b>Breakout board switch:</b> it sets the power for pins 9 to 16 (3.3V or 5V). Keep it on 3.3V; the micro:bit pins themselves only handle 3.3V.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>Kit and tutorials: <a href="https://tinkercademy.com/microbit/">tinkercademy.com/microbit</a> · Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>
