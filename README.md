@@ -2,12 +2,21 @@
 
 A printable intro page for kids aged 10-13 using the Tinkercademy micro:bit Tinker Kit.
 
+![Screen preview](docs/preview-screen.png)
+
 Open `index.html` in a browser. To print, use Print, then Save as PDF (A4).
 
 - `index.html`: the page
 - `style.css`: the styles
 - `images/`: photos and screenshots
+- `docs/`: the preview pictures in this README
 - `HOSTING.md`: notes for putting it online later
+
+## Printed
+
+Prints on 5 A4 pages.
+
+![Printed pages](docs/preview-print.jpg)
 
 ## Credits
 
