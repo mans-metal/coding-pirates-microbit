@@ -4,13 +4,19 @@ A printable intro page for kids aged 10-13 using the Tinkercademy micro:bit Tink
 
 ![Screen preview](docs/preview-screen.png)
 
-Open `index.html` in a browser. To print, use Print, then Save as PDF (A4).
+Open `index.html` in a browser and pick a language (English or Dansk). To print, use Print, then Save as PDF (A4).
 
-- `index.html`: the page
+- `index.html`: language picker
+- `en/index.html`: the page in English
+- `da/index.html`: the page in Danish
 - `style.css`: the styles
 - `images/`: photos and screenshots
 - `docs/`: the preview pictures in this README
 - `HOSTING.md`: notes for putting it online later
+
+## Translations
+
+Each language is a folder with the same page: `en/index.html` and `da/index.html`. Keep the structure, ids and class names identical, so the two files can be compared. When you change the English text, update the Danish too.
 
 ## Printed
 

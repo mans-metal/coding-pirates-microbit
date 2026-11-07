@@ -14,9 +14,13 @@ The site is plain HTML and CSS: no build step, no dependencies. Any static host 
 3. Tick "Enforce HTTPS".
 4. The site appears at `https://<username>.github.io/coding-pirates-microbit/`.
 
+## Languages
+
+- [ ] Once you know the address, add `<link rel="alternate" hreflang="en" href="https://.../en/">` style tags (full URLs) to the `<head>` of each page, one per language, so search engines link the versions.
+
 ## Hardening (optional)
 
-Add inside `<head>` in `index.html`. The page has no scripts, fonts or inline styles, so this should not break anything; check by opening the hosted page.
+Add inside `<head>` of every page (`index.html`, `en/index.html`, `da/index.html`). The page has no scripts, fonts or inline styles, so this should not break anything; check by opening the hosted page.
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">

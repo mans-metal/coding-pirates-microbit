@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mød micro:bit</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!-- Translated from en/index.html as of commit 37d8de9. Keep structure, ids and classes identical. -->
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/index.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/index.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <img class="smiley" src="../images/smiley_face_microbit.png" alt="En micro:bit, der viser et smiley-ansigt med sine lys.">
+  <h1>Mød <span>micro:bit</span></h1>
+  <p>En lillebitte computer, som du selv kan programmere. Den kan ligge i din hånd, og den er fyldt med lys, knapper og sensorer.</p>
+</header>
+
+<main>
+
+<section>
+  <h2>1. Hvad er en micro:bit?</h2>
+  <div class="cards">
+    <div class="card"><h3>En lillebitte computer</h3><p>Den følger de instruktioner (kode), som <em>du</em> skriver.</p></div>
+    <div class="card"><h3>Den kan mærke</h3><p>Knaptryk, vip, rystelser, retning, temperatur og lys.</p></div>
+    <div class="card"><h3>Den kan vise</h3><p>Billeder, tal og ord på sine 25 små lys.</p></div>
+    <div class="card"><h3>Den kan snakke</h3><p>Den sender beskeder til andre micro:bits via radio.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>2. Forsiden af pladen</h2>
+  <div class="two-col">
+    <svg viewBox="0 0 400 320" class="board" role="img" aria-label="Forsiden af en micro:bit med forklaringer">
+      <rect x="60" y="30" width="280" height="240" rx="18" fill="#fff" stroke="#1f2a44" stroke-width="3"/>
+      <!-- USB -->
+      <rect x="160" y="14" width="80" height="26" rx="4" fill="#b8bfcc"/>
+      <!-- LEDs -->
+      <g fill="#ff4d4d">
+        <circle cx="160" cy="100" r="9"/><circle cx="180" cy="100" r="9"/><circle cx="200" cy="100" r="9"/><circle cx="220" cy="100" r="9"/><circle cx="240" cy="100" r="9"/>
+        <circle cx="160" cy="125" r="9"/><circle cx="180" cy="125" r="9"/><circle cx="200" cy="125" r="9"/><circle cx="220" cy="125" r="9"/><circle cx="240" cy="125" r="9"/>
+        <circle cx="160" cy="150" r="9"/><circle cx="180" cy="150" r="9"/><circle cx="200" cy="150" r="9"/><circle cx="220" cy="150" r="9"/><circle cx="240" cy="150" r="9"/>
+        <circle cx="160" cy="175" r="9"/><circle cx="180" cy="175" r="9"/><circle cx="200" cy="175" r="9"/><circle cx="220" cy="175" r="9"/><circle cx="240" cy="175" r="9"/>
+        <circle cx="160" cy="200" r="9"/><circle cx="180" cy="200" r="9"/><circle cx="200" cy="200" r="9"/><circle cx="220" cy="200" r="9"/><circle cx="240" cy="200" r="9"/>
+      </g>
+      <!-- Buttons -->
+      <circle cx="105" cy="150" r="20" fill="#e8e8e8" stroke="#1f2a44" stroke-width="2"/><text x="105" y="157" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2a44">A</text>
+      <circle cx="295" cy="150" r="20" fill="#e8e8e8" stroke="#1f2a44" stroke-width="2"/><text x="295" y="157" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2a44">B</text>
+      <!-- Pins -->
+      <g fill="#f2c94c">
+        <circle cx="105" cy="250" r="14"/><circle cx="150" cy="250" r="14"/><circle cx="195" cy="250" r="14"/><circle cx="240" cy="250" r="14"/><circle cx="285" cy="250" r="14"/>
+      </g>
+      <g font-size="11" font-weight="700" fill="#1f2a44" text-anchor="middle">
+        <text x="105" y="254">0</text><text x="150" y="254">1</text><text x="195" y="254">2</text><text x="240" y="254">3V</text><text x="285" y="254">GND</text>
+      </g>
+      <!-- callouts -->
+      <g font-size="14" fill="#222">
+        <text x="250" y="12">USB-port (bagpå)</text>
+        <text x="10" y="300">Guldpins (kantstik)</text>
+        <text x="105" y="190" text-anchor="middle" font-size="14">Knap A</text><text x="295" y="190" text-anchor="middle" font-size="14">Knap B</text>
+        <text x="200" y="234" text-anchor="middle" font-size="14">25 LED-lys</text>
+      </g>
+    </svg>
+    <ol class="legend">
+      <li><b>USB-port</b> (på bagsiden, ved den øverste kant): sæt et kabel i her for at sende din kode til micro:bit'en og give den strøm.</li>
+      <li><b>Knap A og B</b>: tryk på dem for at få noget til at ske. Trykker du på A og B på samme tid, tæller det som en tredje knap!</li>
+      <li><b>LED-gitter</b>: 25 røde lys i 5 rækker med 5 i hver. Du bestemmer over hvert eneste lys.</li>
+      <li><b>Guldpins</b>: micro:bit'ens "fingerspidser". Her sætter du ledninger og krokodillenæb på.</li>
+    </ol>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvad skal guldpins bruges til?</h3>
+    <p>Tænk på pins som micro:bit'ens fingerspidser. En pin kan sende en besked ud (tænd et lys) eller lytte efter en besked, der kommer ind (bliver der trykket på en knap?). Der er 25 guldstriber. De fem med store ringe (<b>0, 1, 2, 3V</b> og <b>GND</b>) er de nemme at sætte klemmer på.</p>
+  </aside>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvorfor er der en GND?</h3>
+    <p>Strøm kan kun løbe rundt i en lukket ring. Tænk på en pumpe, der skubber vand gennem et rør, rundt om et lille vandhjul og tilbage til pumpen. Her er micro:bit'en pumpen: strømmen går ud gennem <b>3V</b>, gennem din del (for eksempel et lys) og ind igen gennem <b>GND</b>. Er der et hul i ringen, flytter intet sig, og lyset bliver ved med at være slukket. <b>GND</b> (på dansk: stel) er en forkortelse af det engelske ord "ground" (jord). Navnet er lånt fra de første telegraflinjer, som faktisk brugte jorden som vejen tilbage. Din micro:bit er ikke forbundet til jorden, så for os betyder det bare "vejen tilbage". Delene i dit kit har også en tredje ledning, <b>Signal</b>, som bærer beskeden ("tænd!").</p>
+  </aside>
+</section>
+
+<section>
+  <h2>3. LED-gitteret: find vej rundt</h2>
+  <p>Hvert lys har en adresse, der består af to tal: <b>x</b> (hen ad) og <b>y</b> (ned ad). Vi skriver den som <b>(x, y)</b>. Man begynder at tælle fra <b>0</b>, ikke fra 1!</p>
+  <div class="two-col">
+    <svg viewBox="0 0 360 360" class="grid" role="img" aria-label="LED-gitter på 5 gange 5 med koordinater, fra (0,0) øverst til venstre til (4,4) nederst til højre">
+<text x="80" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">0</text>
+<text x="24" y="86" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">0</text>
+<text x="140" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">1</text>
+<text x="24" y="146" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">1</text>
+<text x="200" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">2</text>
+<text x="24" y="206" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">2</text>
+<text x="260" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">3</text>
+<text x="24" y="266" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">3</text>
+<text x="320" y="24" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">4</text>
+<text x="24" y="326" font-size="16" font-weight="700" text-anchor="middle" fill="#1f2a44">4</text>
+<rect x="50" y="40" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="80" y="75" font-size="13" text-anchor="middle" fill="#1f2a44">(0,0)</text>
+<rect x="110" y="40" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="170" y="40" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="230" y="40" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="290" y="40" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="50" y="100" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="110" y="100" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="140" y="135" font-size="13" text-anchor="middle" fill="#1f2a44">(1,1)</text>
+<rect x="170" y="100" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="230" y="100" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="290" y="100" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="50" y="160" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="110" y="160" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="170" y="160" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="200" y="195" font-size="13" text-anchor="middle" fill="#1f2a44">(2,2)</text>
+<rect x="230" y="160" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="290" y="160" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="50" y="220" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="110" y="220" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="170" y="220" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="230" y="220" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="260" y="255" font-size="13" text-anchor="middle" fill="#1f2a44">(3,3)</text>
+<rect x="290" y="220" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="50" y="280" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="110" y="280" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="170" y="280" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="230" y="280" width="60" height="60" fill="#fff" stroke="#1f2a44" stroke-width="2"/>
+<rect x="290" y="280" width="60" height="60" fill="#ffd6d6" stroke="#1f2a44" stroke-width="2"/>
+<text x="320" y="315" font-size="13" text-anchor="middle" fill="#1f2a44">(4,4)</text>
+<text x="24" y="24" font-size="14" font-weight="700" text-anchor="middle" fill="#ff4d4d">x →</text><text x="24" y="62" font-size="14" font-weight="700" text-anchor="middle" fill="#ff4d4d">y ↓</text></svg>
+    <div class="legend">
+      <ul>
+        <li><b>x</b> = hvor langt <b>hen ad</b> (venstre → højre)</li>
+        <li><b>y</b> = hvor langt <b>ned ad</b> (øverst → nederst)</li>
+        <li><b>(0, 0)</b> er lyset <b>øverst til venstre</b>.</li>
+        <li><b>(4, 4)</b> er lyset <b>nederst til højre</b>.</li>
+        <li><b>(2, 2)</b> er lyset <b>i midten</b>.</li>
+      </ul>
+      <div class="try"><b>Lille quiz:</b> Hvilket lys sidder på (4, 0)? &nbsp; Hvilket sidder på (0, 4)? Husk: x kommer først, så y.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>4. Bagsiden af pladen</h2>
+  <div class="two-col">
+    <figure class="labelled">
+      <img src="../images/microbit_back.jpg" alt="Bagsiden af en micro:bit: et micro-USB-stik, en reset-knap og et batteristik langs den øverste kant, en stor chip til venstre og guldringe til pins langs bunden.">
+      <svg viewBox="0 0 474 474" aria-hidden="true">
+        <line x1="195" y1="28" x2="228" y2="76" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="195" y1="28" x2="228" y2="76" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="228" cy="76" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<line x1="300" y1="28" x2="312" y2="86" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="300" y1="28" x2="312" y2="86" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="312" cy="86" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<line x1="425" y1="28" x2="396" y2="100" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="425" y1="28" x2="396" y2="100" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="396" cy="100" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<line x1="32" y1="110" x2="100" y2="152" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="110" x2="100" y2="152" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="100" cy="152" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<line x1="225" y1="455" x2="225" y2="358" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="225" y1="455" x2="225" y2="358" stroke="#1f2a44" stroke-width="3" stroke-linecap="round"/><circle cx="225" cy="358" r="6" fill="#ff4d4d" stroke="#fff" stroke-width="2"/>
+<circle cx="195" cy="28" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="195" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">1</text>
+<circle cx="300" cy="28" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="300" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">2</text>
+<circle cx="425" cy="28" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="425" y="36" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">3</text>
+<circle cx="32" cy="110" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="32" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">4</text>
+<circle cx="225" cy="455" r="19" fill="#fff" stroke="#1f2a44" stroke-width="3"/><text x="225" y="463" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2a44">5</text>
+      </svg>
+    </figure>
+    <ol class="legend">
+      <li><b>USB-port</b>: sæt kablet i her for at overføre kode og give strøm.</li>
+      <li><b>Reset-knap</b>: starter dit program forfra.</li>
+      <li><b>Batteristik</b>: sæt en batteripakke i, så du kan klare dig uden ledning.</li>
+      <li><b>Processor</b>: hjernechippen, der følger din kode.</li>
+      <li><b>Pin-ringe</b>: de guldringe, du sætter klemmer på. Det er de samme pins som på forsiden.</li>
+    </ol>
+  </div>
+  <p>Små sensorchips på bagsiden klarer to opgaver: <b>kompasset</b> ved, hvilken vej der er nord, og <b>accelerometeret</b> mærker, når den bliver vippet, rystet eller falder.</p>
+  <p class="note">Din micro:bit er en <b>V1</b>. Den har <b>ingen højttaler og ingen mikrofon</b> (den nyere V2 har begge dele), så det er summeren i dit kit, der laver lydene. Den kan snakke via <b>Bluetooth</b> og <b>radio</b>.</p>
+</section>
+
+<section>
+  <h2>5. Hvordan fortæller du den, hvad den skal gøre?</h2>
+  <p>Du skriver et program og sender det så til micro:bit'en. Hjemmesiden <a href="https://makecode.microbit.org/">makecode.microbit.org</a> er gratis og kører i din browser. Der er ikke noget, du skal installere, og du behøver ikke logge ind (Sign In): start bare et <b>Nyt projekt (New Project)</b>.</p>
+  <p>Blokke (Blocks) er den nemmeste måde at starte på: du klikker dem sammen, ligesom i Scratch. Du kan også skrive det samme program som tekst i Python eller JavaScript.</p>
+  <figure class="labelled">
+    <img src="../images/make_code_start_page.png" alt="MakeCode-editoren: en micro:bit-simulator til venstre, en liste med bloktyper i midten og et arbejdsområde med to blokke, on start og forever, til højre.">
+    <svg viewBox="0 0 2560 1356" aria-hidden="true">
+      <line x1="1408" y1="128" x2="883" y2="77" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="1408" y1="128" x2="883" y2="77" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="883" cy="77" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<line x1="320" y1="1011" x2="384" y2="538" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="320" y1="1011" x2="384" y2="538" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="384" cy="538" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<line x1="1382" y1="717" x2="876" y2="698" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="1382" y1="717" x2="876" y2="698" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="876" cy="698" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<line x1="1446" y1="486" x2="1446" y2="335" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="1446" y1="486" x2="1446" y2="335" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="1446" cy="335" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<line x1="666" y1="1139" x2="512" y2="1261" stroke="#fff" stroke-width="13" stroke-linecap="round"/><line x1="666" y1="1139" x2="512" y2="1261" stroke="#1f2a44" stroke-width="6" stroke-linecap="round"/><circle cx="512" cy="1261" r="13" fill="#ff4d4d" stroke="#fff" stroke-width="4"/>
+<circle cx="1408" cy="128" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="1408" y="145" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">1</text>
+<circle cx="320" cy="1011" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="320" y="1028" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">2</text>
+<circle cx="1382" cy="717" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="1382" y="734" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">3</text>
+<circle cx="1446" cy="486" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="1446" y="503" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">4</text>
+<circle cx="666" cy="1139" r="42" fill="#fff" stroke="#1f2a44" stroke-width="7"/><text x="666" y="1156" text-anchor="middle" font-size="52" font-weight="700" fill="#1f2a44">5</text>
+    </svg>
+  </figure>
+  <div class="two-col">
+    <ol class="legend">
+      <li><b>Blocks / JavaScript</b> (blokke / JavaScript): skift mellem måder at skrive din kode på (Python finder du i menuen).</li>
+      <li><b>micro:bit'en på skærmen</b>: test dit program her først.</li>
+      <li><b>Bloktyper</b>: vælg blokke fra de farverige grupper.</li>
+      <li><b>Arbejdsområde</b>: klik dine blokke sammen her.</li>
+      <li><b>Download</b>: send dit program over på den rigtige micro:bit.</li>
+    </ol>
+    <ol class="legend steps">
+      <li>Gå ind på <b>makecode.microbit.org</b>, og start et nyt projekt.</li>
+      <li>Byg dit program af blokke.</li>
+      <li>Prøv det på micro:bit'en på skærmen.</li>
+      <li>Forbind din micro:bit med USB-kablet, og download. Hvis programmet ikke kommer direkte over, så kopiér filen over på drevet, der hedder MICROBIT.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="kit">
+  <h2>6. Hvad er der i dit kit?</h2>
+  <p>Tinkercademy micro:bit Tinker Kit. Find hvert nummer på billedet, og læs så, hvad delen gør.</p>
+  <figure class="labelled">
+    <img src="../images/kit_v1.webp" alt="Den åbne kitkasse: en bakke med sensor- og outputmoduler, breakout-boardet, en pose ledninger med en servo, et potentiometer og en micro:bit.">
+    <svg viewBox="0 0 1680 1260" aria-hidden="true">
+      <line x1="470" y1="950" x2="560" y2="985" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="470" y1="950" x2="560" y2="985" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="560" cy="985" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="850" y1="280" x2="790" y2="400" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="850" y1="280" x2="790" y2="400" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="790" cy="400" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="135" y1="300" x2="200" y2="345" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="135" y1="300" x2="200" y2="345" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="200" cy="345" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="240" y1="270" x2="300" y2="335" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="240" y1="270" x2="300" y2="335" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="300" cy="335" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="335" y1="215" x2="395" y2="285" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="335" y1="215" x2="395" y2="285" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="395" cy="285" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="440" y1="170" x2="480" y2="250" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="440" y1="170" x2="480" y2="250" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="480" cy="250" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="520" y1="135" x2="565" y2="215" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="520" y1="135" x2="565" y2="215" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="565" cy="215" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="615" y1="100" x2="655" y2="180" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="615" y1="100" x2="655" y2="180" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="655" cy="180" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="430" y1="505" x2="430" y2="460" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="430" y1="505" x2="430" y2="460" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="430" cy="460" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="260" y1="640" x2="335" y2="545" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="260" y1="640" x2="335" y2="545" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="335" cy="545" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="575" y1="615" x2="515" y2="565" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="575" y1="615" x2="515" y2="565" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="515" cy="565" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="740" y1="720" x2="670" y2="815" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="740" y1="720" x2="670" y2="815" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="670" cy="815" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="480" y1="700" x2="540" y2="790" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="480" y1="700" x2="540" y2="790" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="540" cy="790" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="1040" y1="790" x2="985" y2="870" stroke="#fff" stroke-width="11" stroke-linecap="round"/><line x1="1040" y1="790" x2="985" y2="870" stroke="#1f2a44" stroke-width="5" stroke-linecap="round"/><circle cx="985" cy="870" r="10" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <circle cx="470" cy="950" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="470" y="968" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">1</text>
+      <circle cx="850" cy="280" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="850" y="298" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">2</text>
+      <circle cx="135" cy="300" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="135" y="318" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">3</text>
+      <circle cx="240" cy="270" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="240" y="288" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">4</text>
+      <circle cx="335" cy="215" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="335" y="233" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">5</text>
+      <circle cx="440" cy="170" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="440" y="188" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">6</text>
+      <circle cx="520" cy="135" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="520" y="153" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">7</text>
+      <circle cx="615" cy="100" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="615" y="118" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">8</text>
+      <circle cx="430" cy="505" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="430" y="523" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">9</text>
+      <circle cx="260" cy="640" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="260" y="658" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">10</text>
+      <circle cx="575" cy="615" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="575" y="633" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">11</text>
+      <circle cx="740" cy="720" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="740" y="738" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">12</text>
+      <circle cx="480" cy="700" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="480" y="718" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">13</text>
+      <circle cx="1040" cy="790" r="44" fill="#fff" stroke="#1f2a44" stroke-width="6"/><text x="1040" y="808" text-anchor="middle" font-size="54" font-weight="700" fill="#1f2a44">14</text>
+    </svg>
+  </figure>
+  <ol class="parts-list">
+      <li><b>micro:bit</b>: Hjernen i det hele. Den kører din kode.<br><i>Du kan bruge den til at køre det program, du skriver.</i></li>
+      <li><b>Breakout-board</b>: Giver micro:bit'ens pins nemme stik.<br><i>Du kan bruge det til at forbinde alle delene herunder.</i></li>
+      <li><b>PIR-sensor</b>: Opdager, når noget varmt, som dig, bevæger sig tæt på.<br><i>Du kan bruge den til at lave en alarm, der opdager, når nogen går forbi.</i></li>
+      <li><b>Stødsensor</b>: En kontakt, der mærker et stød eller et tryk.<br><i>Du kan bruge den til at stoppe en robot, når den kører ind i en væg.</i></li>
+      <li><b>Passiv summer</b>: Spiller de toner og bip, du programmerer.<br><i>Du kan bruge den til at spille en melodi eller slå alarm.</i></li>
+      <li><b>Grøn LED-klods</b>: Et klart lys, du kan tænde og slukke.<br><i>Du kan bruge den til at lave et signallys.</i></li>
+      <li><b>Rød LED-klods</b>: Et klart lys, du kan tænde og slukke.<br><i>Du kan bruge den til at lave et advarselslys.</i></li>
+      <li><b>Blå LED-klods</b>: Et klart lys, du kan tænde og slukke.<br><i>Du kan bruge den til at lave et statuslys.</i></li>
+      <li><b>ADKeypad</b>: Et lille tastatur med knapper, der deler én enkelt pin.<br><i>Du kan bruge det til at bygge en spilcontroller.</i></li>
+      <li><b>Jordfugtsensor</b>: Måler, hvor våd jorden er.<br><i>Du kan bruge den til at finde ud af, om en plante trænger til vand.</i></li>
+      <li><b>OLED-skærm</b>: En lillebitte skærm til tekst og enkle billeder.<br><i>Du kan bruge den til at vise point eller beskeder.</i></li>
+      <li><b>Mini-servo</b>: En motor, der drejer sin arm hen til en vinkel, du selv vælger.<br><i>Du kan bruge den til at bevæge et flag, en dør eller en robotarm.</i></li>
+      <li><b>Jumperledninger</b>: Kabler med 3 ledninger, der forbinder delene med boardet.<br><i>Du kan bruge dem til at sætte hver del i breakout-boardet.</i></li>
+      <li><b>Potentiometer</b>: En drejeknap. micro:bit'en kan aflæse, hvor langt du har drejet den.<br><i>Du kan bruge det til at lave en lysdæmper eller en fartknap.</i></li>
+  </ol>
+  <p class="note">Dit kit har også et USB-kabel og en batteripakke, men de er ikke med på billedet.</p>
+</section>
+
+<section>
+  <h2>7. Breakout-boardet</h2>
+  <p>micro:bit'ens guldstriber er bittesmå og svære at sætte klemmer på. <b>Breakout-boardet</b> løser det: micro:bit'en bliver sat ned i det, og de fleste pins får et nemt stik til dine dele. Det har kælenavnet <b>BoB</b>.</p>
+  <figure class="labelled narrow">
+    <img src="../images/breakout_board.webp" alt="Breakout-boardet set oppefra: et sort stik øverst, gule og blå signalstik over røde og sorte rækker, og langs bunden to sorte stik og en lille strømkontakt.">
+    <svg viewBox="0 0 800 800" aria-hidden="true">
+      <line x1="730" y1="100" x2="600" y2="170" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="730" y1="100" x2="600" y2="170" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="600" cy="170" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="150" y1="440" x2="260" y2="500" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="150" y1="440" x2="260" y2="500" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="260" cy="500" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="600" y1="420" x2="520" y2="505" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="600" y1="420" x2="520" y2="505" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="520" cy="505" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="100" y1="730" x2="250" y2="650" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="100" y1="730" x2="250" y2="650" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="250" cy="650" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="430" y1="745" x2="430" y2="670" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="430" y1="745" x2="430" y2="670" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="430" cy="670" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="580" y1="750" x2="558" y2="655" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="580" y1="750" x2="558" y2="655" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="558" cy="655" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <circle cx="730" cy="100" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="730" y="110" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">1</text>
+      <circle cx="150" cy="440" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="150" y="450" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">2</text>
+      <circle cx="600" cy="420" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="600" y="430" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">3</text>
+      <circle cx="100" cy="730" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="100" y="740" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">4</text>
+      <circle cx="430" cy="745" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="430" y="755" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">5</text>
+      <circle cx="580" cy="750" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="580" y="760" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">6</text>
+    </svg>
+  </figure>
+    <ol class="legend cols">
+      <li><b>Plads til micro:bit</b>: skub micro:bit'en ned her.</li>
+      <li><b>Stik til pin 0 til 8</b>: til dine dele.</li>
+      <li><b>Stik til pin 9 til 16</b>: flere pladser til dine dele.</li>
+      <li><b>Skærmstik</b>: her skal OLED-skærmen sidde.</li>
+      <li><b>Ekstra pins</b>: til udvidelser, du måske prøver senere.</li>
+      <li><b>Strømkontakt</b> til pin 9 til 16: lad den stå på <b>3.3V</b>, medmindre din lærer siger noget andet.</li>
+    </ol>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvorfor har pins farver?</h3>
+    <p>Farverne er en kode, så du ikke blander tingene sammen. <b>Gul eller blå</b> = Signal (S): beskeden. <b>Rød</b> = strøm (V; på boardet står der 3V3 eller VCC). <b>Sort</b> = GND (G): vejen tilbage. Sæt hvert kabel i, så den sorte ledning sidder på den sorte række. Den gule gruppe (pin 0 til 8) giver altid 3.3V. Den blå gruppe (pin 9 til 16) får sin strøm gennem den lille kontakt, så lad den stå på 3.3V.</p>
+  </aside>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvad er de ekstra pins?</h3>
+    <p>Nogle dele sender masser af information, ikke bare tændt eller slukket. Chips kan snakke sammen efter fælles regler, ligesom et sprog. De sorte stik nederst på boardet er til to af de her "sprog": <b>I2C</b> (skærmstikket, som OLED-skærmen bruger) og <b>SPI</b> (til udvidelser, du måske prøver senere). Pins i siderne er også til udvidelser. Du får ikke brug for nogen af dem i dine første projekter.</p>
+  </aside>
+</section>
+
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Kompas:</b> første gang du bruger det, beder micro:bit'en dig om at vippe den, indtil alle lys er tændt (den viser rulleteksten TILT TO FILL SCREEN). Det er kalibrering, ikke en fejl.</li>
+    <li><b>Temperatur:</b> micro:bit'en måler temperaturen i sin egen chip, så tallet siger kun cirka, hvor varmt der er i rummet.</li>
+    <li><b>Radio og Bluetooth:</b> de kan ikke bruges i det samme program. MakeCode fjerner radioblokkene, hvis du tilføjer Bluetooth-udvidelsen.</li>
+    <li><b>Pins på V1:</b> pin 3, 4, 6, 7, 9 og 10 deles med LED-displayet, og pin 5 og 11 med knap A og B. Undgå dem, mens lysene eller knapperne er i brug.</li>
+    <li><b>Kontakten på breakout-boardet:</b> den bestemmer spændingen på pin 9 til 16 (3.3V eller 5V). Lad den stå på 3.3V; micro:bit'ens egne pins kan kun tåle 3.3V.</li>
+    <li><b>GND er ikke jording:</b> micro:bit'ens GND er kun kredsløbets vej tilbage (returvej). Det er ikke beskyttelsesjorden i husets el-installation, som giver en fejlstrøm en sikker vej ned i jorden i stedet for gennem et menneske. micro:bit'ens 3V er for lav en spænding til at give stød.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>Fotos: Tinkercademy m.fl. Skærmbillede: Microsoft MakeCode. Alle kreditter står i README-filen.<br>Kit og vejledninger: <a href="https://tinkercademy.com/microbit/">tinkercademy.com/microbit</a> · Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>
