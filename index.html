@@ -63,7 +63,7 @@
       <li><b>USB port</b> (on the back, top edge): plug a cable in here to send your code to the micro:bit and give it power.</li>
       <li><b>Buttons A and B</b>: press them to make things happen. Pressing A and B together counts as a third button!</li>
       <li><b>LED grid</b>: 25 red lights in 5 rows of 5. You control each one.</li>
-      <li><b>Gold pins</b>: the micro:bit's "fingertips". Connect wires and crocodile clips here. The five big rings (<b>0, 1, 2, 3V</b> and <b>GND</b>) are the easiest to grab.</li>
+      <li><b>Gold pins</b>: the micro:bit's "fingertips". Connect wires and crocodile clips here.</li>
     </ol>
   </div>
   <aside class="know">
@@ -72,7 +72,7 @@
   </aside>
   <aside class="know">
     <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why is there a Ground?</h3>
-    <p>Electricity only flows in a loop. Think of a pump pushing water through a pipe, round a little water wheel and back to the pump. The micro:bit is the pump: power goes out through <b>3V</b>, through your part (a light, say) and back in through <b>GND</b>. If there's a gap in the loop, nothing moves and the light stays off. <b>GND</b> is short for "ground", a name borrowed from the wiring in houses, where the real earth is the way back. Your micro:bit isn't connected to the earth, so for us it just means "the way back". Kit parts also have a third wire, <b>Signal</b>, which carries the message ("switch on!").</p>
+    <p>Electricity only flows in a loop. Think of a pump pushing water through a pipe, round a little water wheel and back to the pump. The micro:bit is the pump: power goes out through <b>3V</b>, through your part (a light, say) and back in through <b>GND</b>. If there's a gap in the loop, nothing moves and the light stays off. <b>GND</b> is short for "ground", a name borrowed from early telegraph lines, which really did use the earth as the way back. Your micro:bit isn't connected to the earth, so for us it just means "the way back". Kit parts also have a third wire, <b>Signal</b>, which carries the message ("switch on!").</p>
   </aside>
 </section>
 
@@ -130,7 +130,7 @@
         <li><b>(4, 4)</b> is the <b>bottom-right</b> light.</li>
         <li><b>(2, 2)</b> is the <b>middle</b> light.</li>
       </ul>
-      <div class="try"><b>Quick quiz:</b> Which light is (4, 0)? &nbsp; Which is (0, 4)?</div>
+      <div class="try"><b>Quick quiz:</b> Which light is at (4, 0)? &nbsp; Which is at (0, 4)? Remember: x comes first, then y.</div>
     </div>
   </div>
 </section>
@@ -161,7 +161,7 @@
       <li><b>Pin rings</b>: the gold rings you clip onto, the same pins as on the front.</li>
     </ol>
   </div>
-  <p>Two tiny chips on the back are sensors: the <b>compass</b> knows which way is north, and the <b>accelerometer</b> feels tilting, shaking and falling.</p>
+  <p>Tiny sensor chips on the back do two jobs: the <b>compass</b> knows which way is north, and the <b>accelerometer</b> feels tilting, shaking and falling.</p>
   <p class="note">Your micro:bit is the <b>V1</b>. It has <b>no speaker and no microphone</b> (the newer V2 has both), so your kit's buzzer makes the sounds. It can talk by <b>Bluetooth</b> and <b>radio</b>.</p>
 </section>
 
@@ -196,7 +196,7 @@
       <li>Go to <b>makecode.microbit.org</b> and start a new project.</li>
       <li>Build your program from blocks.</li>
       <li>Try it on the on-screen micro:bit.</li>
-      <li>Download it and copy it onto your real micro:bit. It shows up like a USB drive called MICROBIT.</li>
+      <li>Connect your micro:bit with the USB cable and download. If it doesn't go straight on, copy the file onto the drive called MICROBIT.</li>
     </ol>
   </div>
 </section>
@@ -286,7 +286,7 @@
     </ol>
   <aside class="know">
     <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why are the pins coloured?</h3>
-    <p>The colours are a code so you don't mix things up. <b>Yellow or blue</b> = Signal (S): the message. <b>Red</b> = power (V; printed 3V3 or VCC on the board). <b>Black</b> = Ground (G): the way home. Plug each cable in with its black wire on the black row. The yellow group (pins 0 to 8) always gives 3.3V. The blue group (pins 9 to 16) gets its power from the little switch, so keep it on 3.3V.</p>
+    <p>The colours are a code so you don't mix things up. <b>Yellow or blue</b> = Signal (S): the message. <b>Red</b> = power (V; printed 3V3 or VCC on the board). <b>Black</b> = Ground (G): the way back. Plug each cable in with its black wire on the black row. The yellow group (pins 0 to 8) always gives 3.3V. The blue group (pins 9 to 16) gets its power from the little switch, so keep it on 3.3V.</p>
   </aside>
   <aside class="know">
     <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> What are the extra pins?</h3>
