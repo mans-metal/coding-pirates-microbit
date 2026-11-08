@@ -2,7 +2,7 @@
 
 A friendly, printable guide to the BBC micro:bit, made for kids aged 10-14 and the Coding Pirates volunteers who teach them.
 
-Kids write their programs in [MakeCode](https://makecode.microbit.org/), snapping blocks together much like in Scratch. This project covers the basics: what the board and the kit parts are, how to read the LED grid, and how to start coding. Beginner lesson plans with step-by-step block code are the next thing we are adding.
+Kids write their programs in [MakeCode](https://makecode.microbit.org/), snapping blocks together much like in Scratch. This project covers the basics: what the board and the kit parts are, how to read the LED grid, and how to start coding. The first lessons and reference pages are ready, and more are on the way: variables, logic, sprites and finished projects.
 
 ![Screen preview](docs/preview-screen.png)
 
@@ -12,26 +12,44 @@ Kids write their programs in [MakeCode](https://makecode.microbit.org/), snappin
 - **The kit:** photos with numbered labels for every part in the Tinkercademy micro:bit Tinker Kit (micro:bit V1), plus the breakout board.
 - **Little "light bulb" boxes:** short, plain explanations for things kids always ask, like why there is a Ground and what the gold pins are for.
 - **Teacher notes:** a few handy facts at the end.
+- **Lessons and reference pages:** show an icon, show words and numbers, react to the buttons, and a pins guide, each with block pictures, examples and teacher notes.
 - **Two languages:** English and Danish.
 
-Coming next: lesson plans for the basics (lights, buttons, sensors and more), using MakeCode blocks.
+Coming next: lighting an LED, variables, if/else logic, sensors, sprites, and projects like a music machine, a smart light and a simple snake game.
 
 ## Using it
 
 Open `index.html` in a browser and pick a language. Nothing to install and no internet needed, except to follow the MakeCode links.
 
-To print, use Print, then Save as PDF (A4). The English page is 5 pages.
+To print, use Print, then Save as PDF (A4). The introduction is 5 pages in English and 6 in Danish.
 
 ![Printed pages](docs/preview-print.jpg)
 
+## Checking the site
+
+Run the automatic checks (Python 3, nothing to install):
+
+```
+python3 -m unittest discover -s tests -v
+```
+
+They check that English and Danish have the same pages and structure, every link and picture exists, the language switcher works, pages have no scripts or outside resources, and the block pictures are up to date.
+
+## Block pictures
+
+The block pictures in `images/blocks/` are made by a small script. After you change `tools/blocks.py`, run `python3 tools/blocks.py` and commit the new files. The pictures are simplified drawings, so check them against real MakeCode.
+
 ## Languages
 
-Each language is a folder with the same page: `en/index.html` and `da/index.html`. Keep the structure, ids and class names identical so the two can be compared, and when you change the English text, update the Danish too.
+Each language is a folder with the same pages, for example `en/show-icon.html` and `da/show-icon.html`. Keep the structure, ids and class names identical so the two can be compared, and when you change the English text, update the Danish too.
 
 ## Files
 
 - `index.html`: language picker
-- `en/index.html`, `da/index.html`: the page in English and Danish
+- `en/index.html`, `da/index.html`: the introduction in English and Danish
+- `en/*.html`, `da/*.html`: the lessons and reference pages, one file per page and language (`show-icon`, `show-text`, `buttons`, `pins`)
+- `tools/blocks.py`: draws the block pictures in `images/blocks/`
+- `tests/`: automatic checks
 - `style.css`: the styles, shared by both languages
 - `images/`: photos and screenshots
 - `docs/`: the preview pictures in this README

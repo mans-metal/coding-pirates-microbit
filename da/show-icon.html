@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lektion 1: Vis et ikon</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/show-icon.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/show-icon.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Lektion 1: <span>Vis et ikon</span></h1>
+  <p>Få din micro:bit til at vise et hjerte med sine 25 lys. Det tager cirka 20 minutter.</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Det skal du lave</h2>
+  <div class="two-col">
+    <svg viewBox="0 0 220 170" class="fig" role="img" aria-label="En micro:bit, hvor de 25 lys viser et hjerte.">
+      <rect x="4" y="4" width="212" height="162" rx="16" fill="#fff" stroke="#1f2a44" stroke-width="3"/>
+      <circle cx="60" cy="40" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="85" cy="40" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="110" cy="40" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="135" cy="40" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="160" cy="40" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="60" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="85" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="110" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="135" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="160" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="60" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="85" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="110" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="135" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="160" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="60" cy="115" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="85" cy="115" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="110" cy="115" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="135" cy="115" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="160" cy="115" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="60" cy="140" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="85" cy="140" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="110" cy="140" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="135" cy="140" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="160" cy="140" r="9" fill="#e6e6e6" stroke="#bbb"/>
+      <circle cx="28" cy="90" r="14" fill="#e8e8e8" stroke="#1f2a44" stroke-width="2"/><text x="28" y="96" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a44">A</text>
+      <circle cx="192" cy="90" r="14" fill="#e8e8e8" stroke="#1f2a44" stroke-width="2"/><text x="192" y="96" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a44">B</text>
+    </svg>
+    <p>Du skal skrive et lillebitte program, teste det på som-om-micro:bit'en på skærmen og derefter sende det til din rigtige. Når det virker, viser din micro:bit et hjerte.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Det skal du bruge</h2>
+  <ul>
+    <li>En computer med en webbrowser</li>
+    <li>Din micro:bit og dens USB-kabel</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Sådan gør du</h2>
+  <ol class="steps">
+    <li>Gå ind på <a href="https://makecode.microbit.org/">makecode.microbit.org</a> og klik på <b>Nyt projekt (New Project)</b>. Giv det et navn, for eksempel "Mit hjerte", og klik på <b>Opret (Create)</b>.</li>
+    <li>Kig på skærmen. Til venstre er en som-om-micro:bit. I midten er listen med bloktyper. Til højre er arbejdsområdet, hvor du bygger dit program.</li>
+    <li>Klik på <b>Grundlæggende (Basic)</b> i listen. Find blokken <b>vis ikon (show icon)</b>, og træk den ind i blokken <b>når programmet starter (on start)</b>. Den klikker på plads, sådan her:
+      <img class="fig" src="../images/blocks/ex-show-icon.da.svg" alt="Programmet: blokken "når programmet starter" med blokken "vis ikon" sat til et hjerte.">
+    </li>
+    <li>Kig på som-om-micro:bit'en. Der kommer et hjerte frem! Du har skrevet et program.</li>
+    <li>Send det nu til din rigtige micro:bit. Sæt micro:bit'en i computeren med USB-kablet, og klik på <b>Download</b>. Hvis programmet ikke selv kommer over på micro:bit'en, så kopiér den fil, der blev downloadet, over på drevet, der hedder <b>MICROBIT</b>. Din micro:bit viser hjertet.</li>
+  </ol>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvad betyder "når programmet starter"?</h3>
+    <p>Blokke inde i <b>når programmet starter</b> kører én gang, når micro:bit'en starter. Trykker du på reset-knappen på bagsiden, starter den forfra. Bagefter bliver lysene ved med at vise hjertet, indtil du beder dem om at vise noget andet, ligesom et billede, der bliver hængende på væggen.</p>
+  </aside>
+</section>
+
+<section>
+  <h2>Udfordring</h2>
+  <ol>
+    <li>Klik på hjertet i din blok, og vælg et andet ikon. Prøv tre forskellige!</li>
+    <li>Bonus: brug blokken <b>vis LED'er (show leds)</b> (den ligger også i <b>Basis</b>), og klik på de små firkanter for at tegne dit eget billede. Hvilket lys er (2, 2)? Se <a href="index.html#leds">LED-gitteret</a>, hvis du har glemt det.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <p>Klik på fanen <b>JavaScript</b> i MakeCode for at se dit program skrevet som tekst. Du kan også vælge <b>Python</b> i menuen ved siden af.</p>
+  <pre>JavaScript:  basic.showIcon(IconNames.Heart)
+Python:      basic.show_icon(IconNames.HEART)</pre>
+</section>
+
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> cirka 20 minutter plus udfordringen.</li>
+    <li><b>Det lærer de:</b> en hændelse (når programmet starter / on start), at køre et program på en rigtig enhed, og LED-displayet på 5 x 5.</li>
+    <li><b>Hvis der ikke sker noget på micro:bit'en:</b> nogle USB-kabler kan kun lade op og ikke overføre data, så prøv et andet kabel. En blok, der ikke sidder fast inde i <b>når programmet starter</b>, bliver ikke kørt.</li>
+    <li><b>Download:</b> i nogle browsere kan MakeCode sende programmet direkte til micro:bit'en. I andre gemmer den en fil, som skal kopieres over på MICROBIT-drevet.</li>
+    <li>Billedet af blokkene er en forenklet tegning. De rigtige blokke i MakeCode ser lidt anderledes ud.</li>
+  </ul>
+</section>
+
+<p class="back"><a href="index.html">&larr; Tilbage til introduktionen</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

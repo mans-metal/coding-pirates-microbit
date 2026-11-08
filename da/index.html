@@ -85,7 +85,7 @@
   </aside>
 </section>
 
-<section>
+<section id="leds">
   <h2>3. LED-gitteret: find vej rundt</h2>
   <p>Hvert lys har en adresse, der består af to tal: <b>x</b> (hen ad) og <b>y</b> (ned ad). Vi skriver den som <b>(x, y)</b>. Man begynder at tælle fra <b>0</b>, ikke fra 1!</p>
   <div class="two-col">
@@ -171,7 +171,7 @@
     </ol>
   </div>
   <p>Små sensorchips på bagsiden klarer to opgaver: <b>kompasset</b> ved, hvilken vej der er nord, og <b>accelerometeret</b> mærker, når den bliver vippet, rystet eller falder.</p>
-  <p class="note">Din micro:bit er en <b>V1</b>. Den har <b>ingen højttaler og ingen mikrofon</b> (den nyere V2 har begge dele), så det er summeren i dit kit, der laver lydene. Den kan snakke via <b>Bluetooth</b> og <b>radio</b>.</p>
+  <p class="note">Der findes to udgaver af micro:bit'en. <b>V1</b> har ingen højttaler og ingen mikrofon. Den nyere <b>V2</b> har begge dele og desuden et guldlogo over lysene, som du kan røre ved. Kig efter den gyldne oval, så kan du se forskel på dem. Begge kan snakke via <b>Bluetooth</b> og <b>radio</b>. Blokke, der kun virker på en V2, er mærket <span class="badge">Kun V2</span> i lektionerne. Summeren i dit kit kan lave lyd på begge udgaver.</p>
 </section>
 
 <section>
@@ -303,13 +303,39 @@
   </aside>
 </section>
 
+<section id="lessons">
+  <h2>8. Lektioner</h2>
+  <h3>Del 1: Det grundlæggende</h3>
+  <ul>
+    <li><a href="show-icon.html">Vis et ikon</a></li>
+    <li><a href="show-text.html">Vis ord og tal</a></li>
+    <li><a href="buttons.html">Reager på knapperne</a></li>
+    <li><a href="pins.html">Pins: hvilken skal jeg bruge?</a></li>
+    <li>Tænd en LED <span class="badge">kommer snart</span></li>
+    <li>Variabler <span class="badge">kommer snart</span></li>
+  </ul>
+  <h3>Del 2: Vær kreativ</h3>
+  <ul>
+    <li>Hvis og ellers <span class="badge">kommer snart</span></li>
+    <li>Flere sensorer <span class="badge">kommer snart</span></li>
+    <li>Lyd og bevægelse <span class="badge">kommer snart</span></li>
+    <li>Sprites <span class="badge">kommer snart</span></li>
+  </ul>
+  <h3>Del 3: Projekter</h3>
+  <ul>
+    <li>Musikmaskine <span class="badge">kommer snart</span></li>
+    <li>Smart lys <span class="badge">kommer snart</span></li>
+    <li>Slangespil <span class="badge">kommer snart</span></li>
+  </ul>
+</section>
+
 <section class="teacher">
   <h2>Lærernoter</h2>
   <ul>
     <li><b>Kompas:</b> første gang du bruger det, beder micro:bit'en dig om at vippe den, indtil alle lys er tændt (den viser rulleteksten TILT TO FILL SCREEN). Det er kalibrering, ikke en fejl.</li>
     <li><b>Temperatur:</b> micro:bit'en måler temperaturen i sin egen chip, så tallet siger kun cirka, hvor varmt der er i rummet.</li>
     <li><b>Radio og Bluetooth:</b> de kan ikke bruges i det samme program. MakeCode fjerner radioblokkene, hvis du tilføjer Bluetooth-udvidelsen.</li>
-    <li><b>Pins på V1:</b> pin 3, 4, 6, 7, 9 og 10 deles med LED-displayet, og pin 5 og 11 med knap A og B. Undgå dem, mens lysene eller knapperne er i brug.</li>
+    <li><b>Delte pins:</b> pin 3, 4, 6, 7 og 10 deles med LED-displayet (og pin 9 på en V1), og pin 5 og 11 med knap A og B. Undgå dem, mens lysene eller knapperne er i brug.</li>
     <li><b>Kontakten på breakout-boardet:</b> den bestemmer spændingen på pin 9 til 16 (3.3V eller 5V). Lad den stå på 3.3V; micro:bit'ens egne pins kan kun tåle 3.3V.</li>
     <li><b>GND er ikke jording:</b> micro:bit'ens GND er kun kredsløbets vej tilbage (returvej). Det er ikke beskyttelsesjorden i husets el-installation, som giver en fejlstrøm en sikker vej ned i jorden i stedet for gennem et menneske. micro:bit'ens 3V er for lav en spænding til at give stød.</li>
   </ul>

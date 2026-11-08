@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vis ord og tal</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/show-text.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/show-text.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Vis <span>ord og tal</span></h1>
+  <p>Brug det her, når du vil have din micro:bit til at sige noget.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p>micro:bit'en har kun 25 lys, så et helt ord kan ikke være der på én gang. Bogstaverne glider forbi ét ad gangen, ligesom nyhedsteksten, der kører nederst på en tv-skærm. I kode hedder tekst en <b>streng</b> (string): tænk på bogstaver trukket på en snor, som perler. Tal glider også forbi.</p>
+</section>
+<section>
+  <h2>Blokkene</h2>
+  <p>Alle fire ligger i gruppen <b>Grundlæggende (Basic)</b>. Kan du ikke se <b>ryd skærmen (clear screen)</b>, så klik på "... mere" (... more) nederst i gruppen.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/show-number.da.svg" alt="Blokken: vis nummer 0"><figcaption><b>vis nummer (show number)</b>: Lader et tal glide hen over lysene. Klik på 0 for at skrive dit eget tal.</figcaption></figure>
+    <figure><img src="../images/blocks/show-string.da.svg" alt="Blokken: vis streng Hej!"><figcaption><b>vis streng (show string)</b>: Lader den tekst glide forbi, som du skriver i den hvide boks.</figcaption></figure>
+    <figure><img src="../images/blocks/pause.da.svg" alt="Blokken: pause (ms) 100, altså 100 millisekunder"><figcaption><b>pause (ms)</b>: Venter, før den næste blok kører. 1000 millisekunder (ms) er ét sekund, så 500 ms er et halvt sekund.</figcaption></figure>
+    <figure><img src="../images/blocks/clear-screen.da.svg" alt="Blokken: ryd skærmen"><figcaption><b>ryd skærmen (clear screen)</b>: Slukker alle lysene.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvorfor venter blokkene på hinanden?</h3>
+    <p>Blokkene kører i rækkefølge, den ene efter den anden, ligesom trinene i en opskrift. Mens en lang tekst glider forbi, har micro:bit'en travlt med den, så den næste blok venter, til teksten er færdig.</p>
+  </aside>
+</section>
+<section>
+  <h2>Små eksempler</h2>
+  <figure class="example"><img src="../images/blocks/ex-hello.da.svg" alt="Programmet: når programmet starter, vis streng Hej!"><figcaption>Sig hej én gang, når micro:bit'en starter.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-heart-gone.da.svg" alt="Programmet: når programmet starter, vis ikon hjerte, pause (ms) 2000, ryd skærmen"><figcaption>Vis et hjerte i to sekunder, og sluk så lysene.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-i-heart.da.svg" alt="Programmet: når programmet starter, vis streng Jeg, vis ikon hjerte, vis streng micro:bit"><figcaption>Bland tekst og ikoner. Det her kan læses som "Jeg elsker micro:bit".</figcaption></figure>
+</section>
+<section>
+  <h2>Prøv det her</h2>
+  <ol>
+    <li>Vis dit navn.</li>
+    <li>Vis en hel sætning. Hvor lang tid tager det, før hele sætningen er kørt forbi?</li>
+    <li>Vis et hjerte i 1 sekund, så dit navn, og ryd så skærmen.</li>
+    <li>Sværere: tæl "3", "2", "1" med <b>vis nummer</b> og <b>pause</b>.</li>
+  </ol>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>Der sker ingenting.</b> Blokken ligger løst i arbejdsområdet. Klik den ind i <b>når programmet starter (on start)</b>.</li>
+    <li><b>Ordene kommer i forkert rækkefølge.</b> Blokkene kører oppefra og ned. Træk i dem, så de bytter plads.</li>
+    <li><b>Den viser 0.</b> Der står stadig 0 i talboksen. Klik på den, og skriv dit tal.</li>
+    <li><b>Jeg nåede ikke at se teksten.</b> Tryk på reset-knappen på bagsiden for at køre programmet igen.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <pre>JavaScript:  basic.showString("Hej!")
+             basic.showNumber(42)
+             basic.pause(1000)
+             basic.clearScreen()
+
+Python:      basic.show_string("Hej!")
+             basic.show_number(42)
+             basic.pause(1000)
+             basic.clear_screen()</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>Blokkene virker på samme måde på begge.</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> 20 til 30 minutter.</li>
+    <li><b>Det lærer de:</b> at blokke kører i rækkefølge, tekst (strenge) og tal, og millisekunder.</li>
+    <li><b>Til senere:</b> en streng som "5" og tallet 5 ser ens ud på lysene, men de er forskellige slags værdier. Det får betydning, når variabler kommer på banen.</li>
+    <li>Billederne af blokkene er forenklede tegninger. Tjek de rigtige blokke i MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="show-icon.html">Vis et ikon</a> &middot; <a href="buttons.html">Reager på knapperne</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

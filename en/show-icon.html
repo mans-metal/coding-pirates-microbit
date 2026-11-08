@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1: Show an icon</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/show-icon.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/show-icon.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Lesson 1: <span>Show an icon</span></h1>
+  <p>Make your micro:bit show a heart on its 25 lights. It takes about 20 minutes.</p>
+</header>
+
+<main>
+
+<section>
+  <h2>What you will make</h2>
+  <div class="two-col">
+    <svg viewBox="0 0 220 170" class="fig" role="img" aria-label="A micro:bit with a heart lit on its 25 lights.">
+      <rect x="4" y="4" width="212" height="162" rx="16" fill="#fff" stroke="#1f2a44" stroke-width="3"/>
+      <circle cx="60" cy="40" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="85" cy="40" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="110" cy="40" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="135" cy="40" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="160" cy="40" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="60" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="85" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="110" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="135" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="160" cy="65" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="60" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="85" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="110" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="135" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="160" cy="90" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="60" cy="115" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="85" cy="115" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="110" cy="115" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="135" cy="115" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="160" cy="115" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="60" cy="140" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="85" cy="140" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="110" cy="140" r="9" fill="#ff4d4d" stroke="#ff4d4d"/><circle cx="135" cy="140" r="9" fill="#e6e6e6" stroke="#bbb"/><circle cx="160" cy="140" r="9" fill="#e6e6e6" stroke="#bbb"/>
+      <circle cx="28" cy="90" r="14" fill="#e8e8e8" stroke="#1f2a44" stroke-width="2"/><text x="28" y="96" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a44">A</text>
+      <circle cx="192" cy="90" r="14" fill="#e8e8e8" stroke="#1f2a44" stroke-width="2"/><text x="192" y="96" text-anchor="middle" font-size="16" font-weight="700" fill="#1f2a44">B</text>
+    </svg>
+    <p>You will write a tiny program, test it on the pretend micro:bit on screen, and then send it to your real one. When it works, your micro:bit shows a heart.</p>
+  </div>
+</section>
+
+<section>
+  <h2>You need</h2>
+  <ul>
+    <li>A computer with a web browser</li>
+    <li>Your micro:bit and its USB cable</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li>Go to <a href="https://makecode.microbit.org/">makecode.microbit.org</a> and click <b>New Project</b>. Give it a name, like "My heart", and click <b>Create</b>.</li>
+    <li>Look at the screen. On the left is a pretend micro:bit. In the middle is the list of block types. On the right is the workspace, where you build your program.</li>
+    <li>Click <b>Basic</b> in the list. Find the <b>show icon</b> block and drag it into the <b>on start</b> block. It clicks into place, like this:
+      <img class="fig" src="../images/blocks/ex-show-icon.en.svg" alt="The program: an on start block holding a show icon block set to a heart.">
+    </li>
+    <li>Look at the pretend micro:bit. A heart appears! You have written a program.</li>
+    <li>Now send it to your real micro:bit. Plug the micro:bit into the computer with the USB cable and click <b>Download</b>. If the program does not go onto the micro:bit by itself, copy the file that was downloaded onto the drive called <b>MICROBIT</b>. Your micro:bit shows the heart.</li>
+  </ol>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> What does "on start" mean?</h3>
+    <p>Blocks inside <b>on start</b> run once, when the micro:bit starts. Pressing the reset button on the back starts it again. After that, the lights keep showing the heart until you tell them to show something else, like a photo that stays on the wall.</p>
+  </aside>
+</section>
+
+<section>
+  <h2>Challenge</h2>
+  <ol>
+    <li>Click the heart in your block and pick a different icon. Try three!</li>
+    <li>Bonus: use the <b>show leds</b> block (also in <b>Basic</b>) and click the little squares to draw your own picture. Which light is (2, 2)? See <a href="index.html#leds">the LED grid</a> if you forget.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>The code in words</h2>
+  <p>Click the <b>JavaScript</b> tab in MakeCode to see your program written as text. You can also choose <b>Python</b> from the menu next to it.</p>
+  <pre>JavaScript:  basic.showIcon(IconNames.Heart)
+Python:      basic.show_icon(IconNames.HEART)</pre>
+</section>
+
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> about 20 minutes, plus the challenge.</li>
+    <li><b>Ideas covered:</b> an event (on start), running a program on a real device, and the 5 x 5 LED display.</li>
+    <li><b>If nothing appears on the micro:bit:</b> some USB cables only charge and cannot carry data, so try another cable. A block that is not snapped inside <b>on start</b> will not run.</li>
+    <li><b>Downloading:</b> in some browsers MakeCode can send the program straight to the micro:bit. In others it saves a file to copy onto the MICROBIT drive.</li>
+    <li>The block picture is a simplified drawing. The real blocks in MakeCode look slightly different.</li>
+  </ul>
+</section>
+
+<p class="back"><a href="index.html">&larr; Back to the introduction</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

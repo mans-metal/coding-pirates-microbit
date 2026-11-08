@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pins: hvilken skal jeg bruge?</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/pins.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/pins.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Pins: <span>hvilken skal jeg bruge?</span></h1>
+  <p>Brug det her, når du sætter en del i og er i tvivl om, hvilken pin du skal bruge.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p>En <b>pin</b> er en lille metalkontakt, hvor micro:bit'en snakker med verden udenfor. Hver pin har et nummer. De fleste pins er helt ens: enhver ledig pin kan tænde eller slukke et lys. Skal du læse mange forskellige værdier, som på en drejeknap, så brug pin 0, 1 eller 2. Det eneste, der betyder noget, er, at pin-nummeret i din kode er den pin, du har sat din del i. Sætter du en LED i pin 8, skal der også stå pin 8 i din blok.</p>
+  <p>På breakout-boardet har stikkene de samme numre, 0 til 16, så nummeret på boardet er nummeret i din kode.</p>
+  <figure class="labelled narrow">
+    <img src="../images/breakout_board.webp" alt="Breakout-boardet set oppefra, med numre ved stikkene til pin 0 til 8, stikkene til pin 9 til 16 og skærmstikket.">
+    <svg viewBox="0 0 800 800" aria-hidden="true">
+      <line x1="150" y1="440" x2="260" y2="500" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="150" y1="440" x2="260" y2="500" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="260" cy="500" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="600" y1="420" x2="520" y2="505" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="600" y1="420" x2="520" y2="505" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="520" cy="505" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <line x1="100" y1="730" x2="250" y2="650" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="100" y1="730" x2="250" y2="650" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="250" cy="650" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <circle cx="150" cy="440" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="150" y="450" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">1</text>
+      <circle cx="600" cy="420" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="600" y="430" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">2</text>
+      <circle cx="100" cy="730" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="100" y="740" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">3</text>
+    </svg>
+  </figure>
+  <ol class="legend">
+    <li><b>Stik til pin 0 til 8</b></li>
+    <li><b>Stik til pin 9 til 16</b></li>
+    <li><b>Stikket til OLED-skærmen</b></li>
+  </ol>
+</section>
+<section>
+  <h2>To slags opgaver</h2>
+  <ul>
+    <li><b>Tændt eller slukket (digital):</b> pinnen læser eller sender kun 0 eller 1 (0 = slukket, 1 = tændt). Det kan næsten alle pins. Eksempler: en LED-klods, PIR-sensoren, stødsensoren.</li>
+    <li><b>Mange forskellige værdier (analog):</b> pinnen læser et tal fra 0 til 1023, ligesom en lysdæmper, der bliver drejet fra lav til høj. Eksempler: potentiometeret, jordfugtsensoren. Det er kun nogle pins, der kan det.</li>
+  </ul>
+</section>
+<section>
+  <h2>Hvilke pins er særlige?</h2>
+  <table class="pins">
+    <thead><tr><th>Pins</th><th>Hvad de er</th><th>Hvad du skal gøre</th></tr></thead>
+    <tbody>
+      <tr><td>0, 1, 2</td><td>Ledige pins, der kan tænde/slukke <b>og</b> læse mange forskellige værdier.</td><td>Dit bedste valg, især til sensorer, der giver mange forskellige værdier.</td></tr>
+      <tr><td>8, 13, 14, 15, 16</td><td>Ledige pins til tænd/sluk.</td><td>Gode til LED'er, PIR-sensoren og stødsensoren.</td></tr>
+      <tr><td>3, 4, 6, 7, 10 (og 9 på en V1)</td><td>Lysene bruger også de her pins.</td><td>Undgå dem, mens du bruger lysene. Din del kan opføre sig mærkeligt, eller lysene kan flimre.</td></tr>
+      <tr><td>5, 11</td><td>Knap A og B.</td><td>Undgå dem, ellers kommer din del til at trykke på knapperne for dig.</td></tr>
+      <tr><td>19, 20</td><td>Stikket til OLED-skærmen (kaldes I2C).</td><td>Lad dem være i fred.</td></tr>
+      <tr><td>12</td><td>micro:bit'en bruger den selv.</td><td>Spring den over.</td></tr>
+    </tbody>
+  </table>
+  <p>Hvis en pin opfører sig mærkeligt, så flyt din del over på en anden.</p>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>Min del gør ingenting.</b> Pinnen i blokken er ikke den pin, du har sat delen i.</li>
+    <li><b>Lysene flimrer, når jeg sætter noget i.</b> Du har brugt en pin, som lysene også bruger (3, 4, 6, 7 eller 10, og 9 på en V1). Flyt over på en anden pin.</li>
+    <li><b>Min sensor ændrer sig ikke.</b> Tjek pin-nummeret først. En sensor, der giver mange forskellige værdier, virker bedst på pin 0, 1 eller 2.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <p>Du vælger pinnen i blokkens rullemenu (drop-down).</p>
+  <pre>JavaScript:  pins.digitalWritePin(DigitalPin.P8, 1)
+             pins.analogReadPin(AnalogPin.P1)
+
+Python:      pins.digital_write_pin(DigitalPin.P8, 1)
+             pins.analog_read_pin(AnalogPin.P1)</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>Tabellen gælder for begge. På en V2 er pin 9 også ledig, fordi lysene på en V2 ikke bruger den. Hvis en pin opfører sig mærkeligt, så kig på pin-listen for dit board i MakeCode.</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> en opslagsside uden fast tid.</li>
+    <li><b>Idé:</b> pins kan bruges i flæng, medmindre de har en særlig opgave. Tjek tabellen, når en del ikke opfører sig, som den skal.</li>
+    <li>Pin-oplysningerne følger micro:bit'ens hardwaresider (tech.microbit.org). Tjek dem gerne på dine egne boards.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="buttons.html">Reager på knapperne</a> &middot; <a href="show-text.html">Vis ord og tal</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

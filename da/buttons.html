@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reager på knapperne</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/buttons.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/buttons.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Reager på <span>knapperne</span></h1>
+  <p>Brug det her, når der kun skal ske noget, når du trykker på en knap.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p>Indtil nu har dit program kørt én gang, i starten. En <b>hændelse</b> (event) er noget, der sker, for eksempel et tryk på en knap. En hændelsesblok er en blok, der venter: blokkene inde i den sover, indtil hændelsen sker, og så kører de. Tænk på en dørklokke: der sker ingenting, før nogen trykker på den, og så ringer klokken. Hvert tryk får klokken til at ringe igen, og blokkene inde i den kører igen.</p>
+</section>
+<section>
+  <h2>Blokkene</h2>
+  <p>Den her blok ligger i gruppen <b>Input</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/on-button.da.svg" alt="Blokken: når der trykkes på knappen A"><figcaption><b>når der trykkes på knappen A (on button A pressed)</b>: Blokkene inde i den kører, hver gang du trykker på knappen. Klik på A for at vælge B eller A+B (begge knapper på samme tid).</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvorfor står "når der trykkes på knappen A" for sig selv?</h3>
+    <p>Den er ikke en del af <b>når programmet starter (on start)</b>. Den kører ikke i starten. Den venter på, at du trykker på knappen. Derfor står den for sig selv i arbejdsområdet.</p>
+  </aside>
+</section>
+<section>
+  <h2>Små eksempler</h2>
+  <figure class="example"><img src="../images/blocks/ex-buttons.da.svg" alt="To programmer: når der trykkes på knappen A, vis ikon hjerte; når der trykkes på knappen B, vis ikon smiley"><figcaption>A viser et hjerte, og B viser en smiley.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-yes-no.da.svg" alt="To programmer: når der trykkes på knappen A, vis streng ja; når der trykkes på knappen B, vis streng nej"><figcaption>A siger "ja", og B siger "nej".</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-clear.da.svg" alt="Programmet: når der trykkes på knappen A+B, ryd skærmen"><figcaption>Trykker du på A og B på samme tid, slukker lysene.</figcaption></figure>
+</section>
+<section>
+  <h2>Prøv det her</h2>
+  <ol>
+    <li>Få A til at vise et hjerte og B til at vise en smiley. Tryk på dem i den rækkefølge, du vil.</li>
+    <li>Få A+B til at rydde skærmen.</li>
+    <li>Lav en knap, der viser dit navn.</li>
+  </ol>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>Der sker ingenting, når jeg trykker.</b> Blokkene sidder ikke inde i hændelsesblokken. Træk dem ind, så de klikker på plads.</li>
+    <li><b>Lysene bliver ved med at vise det gamle billede.</b> Lysene bliver, som de er, indtil noget ændrer dem. Tilføj <b>ryd skærmen (clear screen)</b>, eller vis noget nyt.</li>
+    <li><b>Programmet startede forfra.</b> Du har trykket på reset-knappen på bagsiden. Det er helt normalt.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <pre>JavaScript:  input.onButtonPressed(Button.A, function () {
+                 basic.showIcon(IconNames.Heart)
+             })
+
+Python:      def on_button_pressed_a():
+                 basic.show_icon(IconNames.HEART)
+             input.on_button_pressed(Button.A, on_button_pressed_a)</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>Knapperne virker på samme måde på begge. <span class="badge">Kun V2</span> Guldlogoet på forsiden af en V2 kan også bruges som en berøringsknap. Brug blokken <b>på logo trykket (on logo pressed)</b>.</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> cirka 20 minutter.</li>
+    <li><b>Det lærer de:</b> hændelser (kode, der venter og så reagerer), og forskellen på kode, der kører én gang, og kode, der venter.</li>
+    <li><b>Typisk misforståelse:</b> børnene forventer, at knapblokkene kører oppefra og ned ligesom <b>når programmet starter</b>.</li>
+    <li>Billederne af blokkene er forenklede tegninger. Tjek de rigtige blokke i MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="show-text.html">Vis ord og tal</a> &middot; <a href="pins.html">Pins</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

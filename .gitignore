@@ -1,3 +1,4 @@
 .DS_Store
 images/demo/
 demo.html
+__pycache__/

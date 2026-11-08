@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Show words and numbers</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/show-text.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/show-text.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Show <span>words and numbers</span></h1>
+  <p>Use this when you want your micro:bit to say something.</p>
+</header>
+
+<main>
+<section>
+  <h2>What it is</h2>
+  <p>The micro:bit has only 25 lights, so a whole word will not fit. The letters scroll past one at a time, like the news ticker at the bottom of a TV screen. In code, text is called a <b>string</b>: think of letters threaded on a piece of string, like beads. Numbers scroll across too.</p>
+</section>
+<section>
+  <h2>The blocks</h2>
+  <p>All four are in the <b>Basic</b> group. If you cannot see <b>clear screen</b>, click "... more" at the bottom of the group.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/show-number.en.svg" alt="The block: show number 0"><figcaption><b>show number</b>: Scrolls a number across the lights. Click the 0 to type your own number.</figcaption></figure>
+    <figure><img src="../images/blocks/show-string.en.svg" alt="The block: show string Hello!"><figcaption><b>show string</b>: Scrolls the text you type in the white box.</figcaption></figure>
+    <figure><img src="../images/blocks/pause.en.svg" alt="The block: pause 100 milliseconds"><figcaption><b>pause (ms)</b>: Waits before the next block. 1000 milliseconds (ms) is one second, so 500 ms is half a second.</figcaption></figure>
+    <figure><img src="../images/blocks/clear-screen.en.svg" alt="The block: clear screen"><figcaption><b>clear screen</b>: Turns all the lights off.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why do blocks wait for each other?</h3>
+    <p>Blocks run in order, one after another, like the steps in a recipe. While a long text is scrolling, the micro:bit is busy with it, so the next block waits until the text has finished.</p>
+  </aside>
+</section>
+<section>
+  <h2>Mini examples</h2>
+  <figure class="example"><img src="../images/blocks/ex-hello.en.svg" alt="The program: on start, show string Hello!"><figcaption>Say hello once, when the micro:bit starts.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-heart-gone.en.svg" alt="The program: on start, show icon heart, pause 2000, clear screen"><figcaption>Show a heart for two seconds, then switch the lights off.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-i-heart.en.svg" alt="The program: on start, show string I, show icon heart, show string micro:bit"><figcaption>Mix text and icons. This one reads "I heart micro:bit".</figcaption></figure>
+</section>
+<section>
+  <h2>Try this</h2>
+  <ol>
+    <li>Show your name.</li>
+    <li>Show a whole sentence. How long does it take to scroll?</li>
+    <li>Show a heart for 1 second, then your name, then clear the screen.</li>
+    <li>Harder: count "3", "2", "1" using <b>show number</b> and <b>pause</b>.</li>
+  </ol>
+</section>
+<section>
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><b>Nothing happens.</b> The block is lying loose on the workspace. Click it into <b>on start</b>.</li>
+    <li><b>The words come in the wrong order.</b> Blocks run from top to bottom. Drag them to swap places.</li>
+    <li><b>It shows 0.</b> The number box still says 0. Click it and type your number.</li>
+    <li><b>I missed the text.</b> Press the reset button on the back to run the program again.</li>
+  </ul>
+</section>
+<section>
+  <h2>The code in words</h2>
+  <pre>JavaScript:  basic.showString("Hello!")
+             basic.showNumber(42)
+             basic.pause(1000)
+             basic.clearScreen()
+
+Python:      basic.show_string("Hello!")
+             basic.show_number(42)
+             basic.pause(1000)
+             basic.clear_screen()</pre>
+</section>
+<section>
+  <h2>V1 and V2</h2>
+  <p>These blocks work the same on both.</p>
+</section>
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> 20 to 30 minutes.</li>
+    <li><b>Ideas covered:</b> running blocks in order, text (strings) and numbers, and milliseconds.</li>
+    <li><b>Looking ahead:</b> a string like "5" and the number 5 look the same on the lights, but they are different kinds of value. This matters when variables arrive.</li>
+    <li>The block pictures are simplified drawings. Check the real blocks in MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="See also"><b>See also:</b> <a href="show-icon.html">Show an icon</a> &middot; <a href="buttons.html">React to the buttons</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Back to the lessons</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

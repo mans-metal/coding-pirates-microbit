@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>React to the buttons</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/buttons.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/buttons.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>React to the <span>buttons</span></h1>
+  <p>Use this when you want something to happen only when you press a button.</p>
+</header>
+
+<main>
+<section>
+  <h2>What it is</h2>
+  <p>So far your program ran once, at the start. An <b>event</b> is something that happens, like a button press. An event block is a waiting block: the blocks inside it sleep until the event happens, then they run. Think of a doorbell: nothing happens until someone presses it, and then the bell rings. Every press rings the bell again, and the blocks inside run again.</p>
+</section>
+<section>
+  <h2>The blocks</h2>
+  <p>This block is in the <b>Input</b> group.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/on-button.en.svg" alt="The block: on button A pressed"><figcaption><b>on button A pressed</b>: The blocks inside run every time you press that button. Click the A to choose B, or A+B (both buttons together).</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why does "on button A pressed" stand on its own?</h3>
+    <p>It is not part of <b>on start</b>. It does not run at the start. It waits for you to press the button. That is why it stands by itself on the workspace.</p>
+  </aside>
+</section>
+<section>
+  <h2>Mini examples</h2>
+  <figure class="example"><img src="../images/blocks/ex-buttons.en.svg" alt="Two programs: on button A pressed show a heart, on button B pressed show a smiley"><figcaption>A shows a heart and B shows a smiley.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-yes-no.en.svg" alt="Two programs: on button A pressed show string yes, on button B pressed show string no"><figcaption>A says yes and B says no.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-clear.en.svg" alt="The program: on button A+B pressed, clear screen"><figcaption>Pressing A and B together switches the lights off.</figcaption></figure>
+</section>
+<section>
+  <h2>Try this</h2>
+  <ol>
+    <li>Make A show a heart and B show a smiley. Press them in any order.</li>
+    <li>Make A+B clear the screen.</li>
+    <li>Make a button that shows your name.</li>
+  </ol>
+</section>
+<section>
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><b>Nothing happens when I press.</b> The blocks are not inside the event block. Drag them in so they click into place.</li>
+    <li><b>The lights keep the old picture.</b> Lights stay as they are until something changes them. Add <b>clear screen</b> or show something new.</li>
+    <li><b>The program started again.</b> You pressed the reset button on the back. That is normal.</li>
+  </ul>
+</section>
+<section>
+  <h2>The code in words</h2>
+  <pre>JavaScript:  input.onButtonPressed(Button.A, function () {
+                 basic.showIcon(IconNames.Heart)
+             })
+
+Python:      def on_button_pressed_a():
+                 basic.show_icon(IconNames.HEART)
+             input.on_button_pressed(Button.A, on_button_pressed_a)</pre>
+</section>
+<section>
+  <h2>V1 and V2</h2>
+  <p>The buttons work the same on both. <span class="badge">V2 only</span> The gold logo on the front of a V2 can work as a touch button too. Use the <b>on logo pressed</b> block.</p>
+</section>
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> about 20 minutes.</li>
+    <li><b>Ideas covered:</b> events (code that waits and then reacts), and the difference between code that runs once and code that waits.</li>
+    <li><b>Common confusion:</b> kids expect the button blocks to run from top to bottom like <b>on start</b>.</li>
+    <li>The block pictures are simplified drawings. Check the real blocks in MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="See also"><b>See also:</b> <a href="show-text.html">Show words and numbers</a> &middot; <a href="pins.html">Pins</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Back to the lessons</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>
