@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flere sensorer</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/sensors.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/sensors.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Flere <span>sensorer</span></h1>
+  <p>Brug det her, når din micro:bit skal lægge mærke til noget i verden omkring den.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p>En <b>sensor</b> er en del, der måler noget og fortæller micro:bit'en det med et tal. Nogle giver kun 0 eller 1 (tændt eller slukket). Andre giver mange forskellige tal.</p>
+  <table class="pins">
+    <thead><tr><th>Del</th><th>Slags</th><th>Den fortæller dig</th></tr></thead>
+    <tbody>
+      <tr><td>PIR-sensor</td><td>Tændt eller slukket</td><td>1, når noget varmt, som dig, bevæger sig tæt på.</td></tr>
+      <tr><td>Stødsensor</td><td>Tændt eller slukket</td><td>Om der bliver trykket på den lige nu.</td></tr>
+      <tr><td>Potentiometer</td><td>Mange værdier</td><td>Hvor langt knappen er drejet, fra 0 til 1023.</td></tr>
+      <tr><td>Jordfugtsensor</td><td>Mange værdier</td><td>Hvor våd jorden er, som et tal.</td></tr>
+      <tr><td>ADKeypad</td><td>Mange værdier</td><td>Én pin, og hver tast giver et forskelligt tal. Brug "vis det" (nedenfor) til at finde dem.</td></tr>
+      <tr><td>Indbygget: vip, temperatur, lys</td><td>Mange værdier</td><td>Ingen ledninger. Brug bare blokkene.</td></tr>
+    </tbody>
+  </table>
+  <p>Sæt delen i en pin (se <a href="pins.html">Pins</a>), og aflæs den med den blok, der passer til dens slags. OLED-skærmen kræver en udvidelse (extension) i MakeCode, som Tinkercademys vejledninger forklarer.</p>
+</section>
+<section>
+  <h2>Blokkene</h2>
+  <p><b>digital læs pin</b> (digital read pin) og <b>analog læs pin</b> (analog read pin) ligger i <b>Pins</b> under <b>Avanceret (Advanced)</b>. De indbyggede ligger i <b>Input</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/digital-read.da.svg" alt="Blokken: digital read pin P0"><figcaption><b>digital læs pin</b>: Læser 0 eller 1 fra en pin. Brug den til PIR-sensoren og stødsensoren.</figcaption></figure>
+    <figure><img src="../images/blocks/analog-read.da.svg" alt="Blokken: analog read pin P1"><figcaption><b>analog læs pin</b>: Læser et tal fra 0 til 1023. Brug den til drejeknappen og jordfugtsensoren på pin 0, 1 eller 2.</figcaption></figure>
+    <figure><img src="../images/blocks/acceleration.da.svg" alt="Blokken: acceleration (mg) x"><figcaption><b>acceleration (mg)</b>: Hvor hårdt micro:bit'en bliver skubbet eller vippet. x er venstre og højre.</figcaption></figure>
+    <figure><img src="../images/blocks/temperature.da.svg" alt="Blokken: temperatur (grader C)"><figcaption><b>temperatur (°C)</b> (temperature): En cirka-temperatur, målt af chippen.</figcaption></figure>
+    <figure><img src="../images/blocks/light-level.da.svg" alt="Blokken: lysniveau"><figcaption><b>lysniveau</b> (light level): Hvor lyst der er, fra 0 til 255.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> I tvivl om, hvad en sensor siger? Vis det!</h3>
+    <p>Sæt målingen ind i en <b>vis nummer</b>-blok (show number), og hold øje. Vift med en hånd, tryk på sensoren, stik kun spidsen af jordføleren i vand (hold micro:bit'en og boardet tørre), og se tallene ændre sig. Vælg så det tal, hvor dit program skal reagere.</p>
+  </aside>
+</section>
+<section>
+  <h2>Små eksempler</h2>
+  <figure class="example"><img src="../images/blocks/ex-show-value.da.svg" alt="Programmet: for altid, vis nummer digital læs pin P0"><figcaption>Vis, hvad en sensor måler, så du kan finde ud af, hvordan den opfører sig.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-pir.da.svg" alt="Programmet: for altid, hvis digital læs pin P0 = 1 så vis ikon flueben, ellers ryd skærmen"><figcaption>Et flueben, når noget bevæger sig foran PIR-sensoren.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-pot.da.svg" alt="Programmet: for altid, vis nummer analog læs pin P1"><figcaption>Drej knappen, og se tallet gå fra 0 op til 1023.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-tilt.da.svg" alt="Programmet: for altid, vis nummer acceleration (mg) x"><figcaption>Vip micro:bit'en til venstre og højre, og hold øje med tallet.</figcaption></figure>
+</section>
+<section>
+  <h2>Prøv det her</h2>
+  <ol>
+    <li>Find ud af, hvad PIR-sensoren måler, når du står stille, og når du vinker.</li>
+    <li>Få et hjerte til at dukke op, når PIR-sensoren ser dig.</li>
+    <li>Find tallene for tør og våd jord, og lav så et ansigt, der er trist, når jorden er tør.</li>
+    <li>Vip micro:bit'en for at finde ud af, hvilken vej der giver et negativt tal.</li>
+  </ol>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>Tallet er altid 0 eller altid 1023.</b> Tjek pin-nummeret. En del, der giver mange værdier, virker bedst på pin 0, 1 eller 2.</li>
+    <li><b>PIR-sensoren reagerer på mærkelige tidspunkter.</b> Den kan have brug for op til et minut til at falde til ro, efter at strømmen er sat til. Vent, og test så.</li>
+    <li><b>Lysniveau viser 0 i starten.</b> Aflæs det igen lidt efter.</li>
+    <li><b>Målingen hopper rundt.</b> Der er ikke noget sat i den pin, eller kablet sidder løst. Hopper den stadig, så sæt en blok <b>sæt pull pin (set pull)</b> (i <b>Pins</b>, under "... mere") ind i <b>når programmet starter</b> for at holde pinnen stabil.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <pre>JavaScript:  pins.digitalReadPin(DigitalPin.P0)
+             pins.analogReadPin(AnalogPin.P1)
+             input.acceleration(Dimension.X)
+
+Python:      pins.digital_read_pin(DigitalPin.P0)
+             pins.analog_read_pin(AnalogPin.P1)
+             input.acceleration(Dimension.X)</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>Blokkene virker på begge. Blokken <b>lysniveau</b> bruger LED-lysene som lyssensor, så den virker bedst, når lysene ikke viser et billede.</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> 40 til 60 minutter. Hver sensor kan være sin egen korte aktivitet.</li>
+    <li><b>Det lærer de:</b> at måle, digital over for analog, og at finde en god grænseværdi ved at teste.</li>
+    <li><b>Tjek på jeres kit:</b> hvad hver del måler (1 eller 0), er forskelligt fra sensor til sensor, og derfor er "vis det"-tricket nyttigt.</li>
+    <li>Billederne af blokkene er forenklede tegninger. Tjek de rigtige blokke i MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="pins.html">Pins</a> &middot; <a href="if-else.html">Hvis og ellers</a> &middot; <a href="sound-movement.html">Lyd og bevægelse</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

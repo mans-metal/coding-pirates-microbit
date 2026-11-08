@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hvis og ellers</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/if-else.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/if-else.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Hvis og <span>ellers</span></h1>
+  <p>Brug det her, når din micro:bit skal vælge, hvad den skal gøre.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p>Nogle gange skal din micro:bit vælge. <b>hvis ... så ... ellers</b> (if ... then ... else) er en vejgaffel: hvis noget er <b>sandt</b>, kører blokkene i <b>så</b>. Hvis det ikke er, kører blokkene i <b>ellers</b>.</p>
+  <p>Det "noget" er et spørgsmål, man kan svare ja eller nej til, og det kaldes en <b>betingelse</b>. Bliver der trykket på knap A? Er scoren større end 4? Blokkene med spidse ender er betingelser.</p>
+</section>
+<section>
+  <h2>Blokkene</h2>
+  <p>Blokkene ligger i gruppen <b>Logik (Logic)</b>, undtagen <b>der trykkes på knappen A</b> (button A is pressed), som ligger i <b>Input</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/if-else.da.svg" alt="Blokken: hvis sand så, ellers"><figcaption><b>hvis ... så ... ellers</b>: Kører enten den ene eller den anden gruppe blokke. Klik på + på blokken for at tilføje flere valg.</figcaption></figure>
+    <figure><img src="../images/blocks/button-pressed.da.svg" alt="Blokken: der trykkes på knappen A"><figcaption><b>der trykkes på knappen A</b>: Sand, så længe knappen bliver holdt nede.</figcaption></figure>
+    <figure><img src="../images/blocks/compare.da.svg" alt="Blokken: 0 = 0"><figcaption><b>0 = 0</b>: Sammenligner to værdier. Klik på tegnet for at vælge &lt;, &gt; eller andre.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvorfor skal den ind i for altid?</h3>
+    <p>En <b>hvis</b> tjekker kun én gang, når micro:bit'en når til den. Inde i <b>for altid</b> (forever) tjekker den igen og igen, så den opdager det, når noget ændrer sig.</p>
+  </aside>
+</section>
+<section>
+  <h2>Små eksempler</h2>
+  <figure class="example"><img src="../images/blocks/ex-if-button.da.svg" alt="Programmet: for altid, hvis der trykkes på knappen A så vis ikon hjerte, ellers ryd skærmen"><figcaption>Vis et hjerte, mens A bliver holdt nede, og ellers ingenting.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-if-score.da.svg" alt="Programmet: når der trykkes på knappen A, ændr score af 1, hvis score > 4 så vis ikon glad ellers vis ikon trist"><figcaption>Efter hvert tryk på A ser du et trist ansigt, indtil det femte tryk gør det glad.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-magic-ball.da.svg" alt="Programmet: på ryst, sæt answer til vælg tilfældig fra 0 til 1, hvis answer = 0 så vis ikon flueben ellers vis ikon kryds"><figcaption>En magisk kugle: ryst den, og den siger ja eller nej.</figcaption></figure>
+</section>
+<section>
+  <h2>Prøv det her</h2>
+  <ol>
+    <li>Lav hjerte-eksemplet, og hold A nede.</li>
+    <li>Skift 4-tallet ud med et andet tal, og se, hvad der ændrer sig.</li>
+    <li>Få den magiske kugle til at give tre svar ved at bruge + på hvis-blokken og <b>vælg tilfældig fra 0 til 2</b> (pick random 0 to 2).</li>
+    <li>Sværere: tænd en LED, mens en knap bliver holdt nede (se <a href="light-led.html">Tænd en LED</a>).</li>
+  </ol>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>Der ændrer sig ingenting.</b> Hvis-blokken ligger i <b>når programmet starter</b> (on start), så den tjekker kun én gang. Flyt den ind i <b>for altid</b>.</li>
+    <li><b>Betingelsen kan ikke passe ind.</b> Betingelser er blokkene med spidse ender. Runde blokke er værdier, og de passer ikke ind der.</li>
+    <li><b>Der står "=", men jeg ville have "større end".</b> Klik på tegnet i sammenligningsblokken for at ændre det.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <pre>JavaScript:  if (input.buttonIsPressed(Button.A)) {
+                 basic.showIcon(IconNames.Heart)
+             } else {
+                 basic.clearScreen()
+             }
+
+Python:      if input.button_is_pressed(Button.A):
+                 basic.show_icon(IconNames.HEART)
+             else:
+                 basic.clear_screen()</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>Det samme på begge.</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> 30 til 40 minutter.</li>
+    <li><b>Det lærer de:</b> betingelser (sandt eller falsk), at vælge mellem to veje, og at tjekke igen og igen.</li>
+    <li><b>Typisk misforståelse:</b> en hvis inde i når programmet starter kører kun én gang.</li>
+    <li>Billederne af blokkene er forenklede tegninger. Tjek de rigtige blokke i MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="variables.html">Variabler</a> &middot; <a href="sensors.html">Flere sensorer</a> &middot; <a href="buttons.html">Reager på knapperne</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

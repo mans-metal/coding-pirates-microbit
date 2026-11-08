@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variables</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/variables.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/variables.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1><span>Variables</span></h1>
+  <p>Use this when you want your micro:bit to remember something, like a score.</p>
+</header>
+
+<main>
+<section>
+  <h2>What it is</h2>
+  <p>A <b>variable</b> is a labelled box that holds one thing, like a number. You give the box a name, such as <b>score</b>, and put a value in it. Later you can look in the box, or put in a new value.</p>
+  <p>This is how your micro:bit remembers things while the program runs.</p>
+</section>
+<section>
+  <h2>The blocks</h2>
+  <p>Click <b>Variables</b>, then <b>Make a Variable...</b>, type a name and click OK. Your blocks appear below it.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/set-variable.en.svg" alt="The block: set score to 0"><figcaption><b>set score to 0</b>: Puts a value in the box. It replaces what was there.</figcaption></figure>
+    <figure><img src="../images/blocks/change-variable.en.svg" alt="The block: change score by 1"><figcaption><b>change score by 1</b>: Adds to what is in the box. Use a minus number to take away.</figcaption></figure>
+    <figure><img src="../images/blocks/variable.en.svg" alt="The block: score"><figcaption><b>score</b>: Gives you the value in the box. Drag it into any block that takes a value.</figcaption></figure>
+    <figure><img src="../images/blocks/pick-random.en.svg" alt="The block: pick random 0 to 10"><figcaption><b>pick random 0 to 10</b>: A number chosen by luck (in the Math group). Both ends can come up, so 0 to 10 can give 0 or 10. Great for dice.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Set or change?</h3>
+    <p><b>set</b> puts in a new value and forgets the old one. <b>change</b> adds to the old one. If the box holds 12, setting it to 5 gives 5, and changing it by 5 gives 17.</p>
+  </aside>
+</section>
+<section>
+  <h2>Mini examples</h2>
+  <figure class="example"><img src="../images/blocks/ex-counter.en.svg" alt="Two programs: on start, set score to 0; on button A pressed, change score by 1 and show number score"><figcaption>Count button presses. Each press adds 1, then shows the number.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-reset.en.svg" alt="The program: on button B pressed, set score to 0 and show number score"><figcaption>B puts the score back to 0.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-dice.en.svg" alt="The program: on button A pressed, set dice to pick random 1 to 6, show number dice"><figcaption>A roll of the dice: a new number from 1 to 6 each time.</figcaption></figure>
+</section>
+<section>
+  <h2>Try this</h2>
+  <ol>
+    <li>Make the counter above and press A ten times.</li>
+    <li>Add B to reset the score.</li>
+    <li>Make a dice that shows a number from 1 to 6.</li>
+    <li>Harder: show a heart when the score reaches 10 (see <a href="if-else.html">If and else</a>).</li>
+  </ol>
+</section>
+<section>
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><b>It shows the word "score".</b> You used <b>show string</b> with the word typed in. Drag the <b>score</b> block into <b>show number</b> instead.</li>
+    <li><b>The score jumps to the wrong number.</b> You used <b>set</b> where you wanted <b>change</b>.</li>
+    <li><b>Two boxes with almost the same name.</b> "score" and "Score" are different variables.</li>
+  </ul>
+</section>
+<section>
+  <h2>The code in words</h2>
+  <pre>JavaScript:  let score = 0
+             score += 1
+             basic.showNumber(score)
+
+Python:      score = 0
+             score += 1
+             basic.show_number(score)</pre>
+</section>
+<section>
+  <h2>V1 and V2</h2>
+  <p>The same on both.</p>
+</section>
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> 30 to 40 minutes.</li>
+    <li><b>Ideas covered:</b> naming, storing and changing a value, and random numbers.</li>
+    <li><b>Common confusion:</b> set versus change, and the variable block versus the typed word.</li>
+    <li>The block pictures are simplified drawings. Check the real blocks in MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="See also"><b>See also:</b> <a href="buttons.html">React to the buttons</a> &middot; <a href="if-else.html">If and else</a> &middot; <a href="show-text.html">Show words and numbers</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Back to the lessons</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

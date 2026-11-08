@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprites</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/sprites.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/sprites.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1><span>Sprites</span></h1>
+  <p>Brug det her, når du vil have noget på lysene, der bevæger sig, for eksempel en figur i et spil.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p>En <b>sprite</b> er en figur på lysene: ét lys, som du kan flytte rundt med. Den har en plads, der skrives (x, y) ligesom på <a href="index.html#leds">LED-gitteret</a>, og den kan flytte sig, dreje og støde ind i ting. <b>x</b> tæller fra 0 til 4 fra venstre mod højre, og <b>y</b> tæller fra 0 til 4 oppefra og ned. En ny sprite kigger mod højre.</p>
+  <p>Det er sådan, man laver spil på micro:bit'en. Sprite-blokkene ligger i gruppen <b>Spil (Game)</b>.</p>
+</section>
+<section>
+  <h2>Blokkene</h2>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/create-sprite.da.svg" alt="Blokken: sæt sprite til skab sprite på x: 2 y: 2"><figcaption><b>skab sprite</b> (create sprite): Laver en sprite på en bestemt plads og gemmer den i en variabel, så du kan tale til den senere.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-move.da.svg" alt="Blokken: sprite flyt med 1"><figcaption><b>flyt med</b> (move by): Flytter spriten fremad i den retning, den vender.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-change.da.svg" alt="Blokken: sprite ændr x med 1"><figcaption><b>ændr x med</b> (change x by): Flytter spriten hen ad (x) eller ned ad (y). Et minustal går den anden vej.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-turn.da.svg" alt="Blokken: sprite drej højre med 90 grader"><figcaption><b>drej højre med (°)</b> (turn): Drejer spriten, så "flyt med" går en ny vej.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-bounce.da.svg" alt="Blokken: sprite hvis på kanten, spring tilbage"><figcaption><b>hvis på kanten, spring tilbage</b> (if on edge, bounce): Vender spriten om, når den når kanten.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-touching.da.svg" alt="Blokken: sprite is touching food"><figcaption><b>is touching</b>: Sand, når to sprites er på det samme lys.</figcaption></figure>
+    <figure><img src="../images/blocks/change-score.da.svg" alt="Blokken: ændr scoren med 1"><figcaption><b>ændr scoren med</b> (change score by): Giver point til spillets score.</figcaption></figure>
+    <figure><img src="../images/blocks/score.da.svg" alt="Blokken: score"><figcaption><b>score</b>: Antallet af point indtil nu.</figcaption></figure>
+    <figure><img src="../images/blocks/game-over.da.svg" alt="Blokken: game over"><figcaption><b>game over</b>: Slutter spillet og viser scoren.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-delete.da.svg" alt="Blokken: sprite delete"><figcaption><b>delete</b>: Fjerner spriten fra lysene.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvorfor ligger spriten i en variabel?</h3>
+    <p>Variablen husker, hvilken sprite du mener, så senere blokke kan sige "flyt den her". Du kan have flere sprites, hver i sin egen kasse med sit eget navn.</p>
+  </aside>
+</section>
+<section>
+  <h2>Små eksempler</h2>
+  <figure class="example"><img src="../images/blocks/ex-sprite-move.da.svg" alt="Tre programmer: når programmet starter, sæt sprite til skab sprite på x: 2 y: 2; når der trykkes på knappen A, sprite ændr x med -1; når der trykkes på knappen B, sprite ændr x med 1"><figcaption>A flytter spriten til venstre, B flytter den til højre.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-sprite-bounce.da.svg" alt="To programmer: når programmet starter, sæt sprite til skab sprite på x: 2 y: 2; for altid, sprite flyt med 1, hvis på kanten, spring tilbage, pause (ms) 500"><figcaption>Spriten går hen over lysene og springer tilbage fra kanten.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-sprite-catch.da.svg" alt="Programmet: når programmet starter, sæt sprite og sæt food til skab sprite; for altid, hvis sprite is touching food så ændr scoren med 1 og food angiv x til vælg tilfældig fra 0 til 4"><figcaption>Få et point, og så hopper maden hen et nyt sted. Den anden sprite hedder food.</figcaption></figure>
+</section>
+<section>
+  <h2>Prøv det her</h2>
+  <ol>
+    <li>Flyt spriten til venstre og højre med A og B.</li>
+    <li>Få den til at springe frem og tilbage hen over lysene.</li>
+    <li>Tilføj en sprite mere, der hedder food, på en tilfældig plads, og få et point, når du rører den.</li>
+    <li>Sværere: slut spillet med <b>game over</b>, når scoren når 10.</li>
+  </ol>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>Spriten flytter sig ikke.</b> Tjek, hvilke blokke der ligger inde i hvilke hændelser. En for altid-løkke (forever) skal have en <b>pause</b>, så du kan se den flytte sig.</li>
+    <li><b>De rører aldrig hinanden.</b> Begge sprites skal findes, og de skal være på det samme lys.</li>
+    <li><b>Min sprite forsvandt.</b> Brug ikke <b>vis</b>-blokke (show), mens et spil kører, for de slås om lysene. Brug i stedet <b>ændr scoren med</b> og <b>game over</b>.</li>
+    <li><b>Den viser den forkerte sprite.</b> En ny sprite, der bliver gemt i den samme variabel, erstatter den gamle.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <pre>JavaScript:  let sprite = game.createSprite(2, 2)
+             sprite.change(LedSpriteProperty.X, 1)
+             sprite.move(1)
+             sprite.ifOnEdgeBounce()
+             game.addScore(1)
+
+Python:      sprite = game.create_sprite(2, 2)
+             sprite.change(LedSpriteProperty.X, 1)
+             sprite.move(1)
+             sprite.if_on_edge_bounce()
+             game.add_score(1)</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>Det samme på begge.</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> 40 til 60 minutter.</li>
+    <li><b>Det lærer de:</b> objekter, der har en plads og kan gøre ting, koordinater, kollision og score.</li>
+    <li><b>Typisk misforståelse:</b> variablen indeholder spriten, ikke et tal.</li>
+    <li>Billederne af blokkene er forenklede tegninger. Tjek de rigtige blokke i MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="variables.html">Variabler</a> &middot; <a href="if-else.html">Hvis og ellers</a> &middot; <a href="blocks.html">Blokoversigt</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

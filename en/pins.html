@@ -26,7 +26,7 @@
 <main>
 <section>
   <h2>What it is</h2>
-  <p>A <b>pin</b> is a metal contact where the micro:bit talks to the outside world. Each pin has a number. Most pins are identical: any free pin can switch a light on or off. To read a range, like a knob, use pin 0, 1 or 2. The only thing that matters is that the pin number in your code is the pin you plugged into. Plug an LED into pin 8 and your block must say pin 8.</p>
+  <p>A <b>pin</b> is a metal contact where the micro:bit talks to the outside world. Each pin has a number. Most pins are identical: any free pin can switch a light on or off. To read a range, like a knob, use pin 0, 1 or 2. The only thing that matters is that the pin number in your code is the pin you plugged into. Plug an LED into pin 1 and your block must say pin 1.</p>
   <p>On the breakout board the plugs carry the same numbers, 0 to 16, so the number on the board is the number in your code.</p>
   <figure class="labelled narrow">
     <img src="../images/breakout_board.webp" alt="The breakout board seen from above, with numbers marking the plugs for pins 0 to 8, the plugs for pins 9 to 16 and the screen plug.">
@@ -48,7 +48,7 @@
 <section>
   <h2>Two kinds of jobs</h2>
   <ul>
-    <li><b>On or off (digital):</b> the pin reads or writes just 0 or 1 (0 = off, 1 = on). Almost every pin can do this. Examples: an LED brick, the PIR sensor, the crash sensor.</li>
+    <li><b>On or off (digital):</b> the pin reads or writes just 0 or 1 (0 = off, 1 = on). The free pins (0, 1, 2, 8, 13, 14, 15, 16) can do this. Examples: an LED brick, the PIR sensor, the crash sensor.</li>
     <li><b>A range of values (analog):</b> the pin reads a number from 0 to 1023, like a dimmer knob turned from low to high. Examples: the potentiometer, the soil moisture sensor. Only some pins can do this.</li>
   </ul>
 </section>
@@ -78,10 +78,10 @@
 <section>
   <h2>The code in words</h2>
   <p>You choose the pin in the drop-down of the block.</p>
-  <pre>JavaScript:  pins.digitalWritePin(DigitalPin.P8, 1)
+  <pre>JavaScript:  pins.digitalWritePin(DigitalPin.P0, 1)
              pins.analogReadPin(AnalogPin.P1)
 
-Python:      pins.digital_write_pin(DigitalPin.P8, 1)
+Python:      pins.digital_write_pin(DigitalPin.P0, 1)
              pins.analog_read_pin(AnalogPin.P1)</pre>
 </section>
 <section>

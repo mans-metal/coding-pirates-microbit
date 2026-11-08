@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tænd en LED</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/light-led.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/light-led.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Tænd en <span>LED</span></h1>
+  <p>Brug det her, når du vil tænde og slukke et lys fra din kode.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p>En <b>LED-klods</b> er et lille lys på en lille plade med et kabel med tre ledninger. Du sætter kablet i breakout-boardet, og en blok tænder og slukker lyset.</p>
+  <p>En pin kan sende et <b>1</b> ud (tændt: send strøm) eller et <b>0</b> (slukket: stop). Blokken <b>digital skriv pin</b> (digital write pin) gør præcis det. Strømmen går ud af pinnen, gennem LED'en og ind igen gennem GND-ledningen (stel). Det er den samme lukkede ring som i boksen om GND på introduktionssiden.</p>
+</section>
+<section>
+  <h2>Sæt den i</h2>
+  <figure class="labelled narrow">
+    <img src="../images/breakout_board.webp" alt="Breakout-boardet set oppefra med et nummer ved stikket til pin 0.">
+    <svg viewBox="0 0 800 800" aria-hidden="true">
+      <line x1="140" y1="430" x2="203" y2="500" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="140" y1="430" x2="203" y2="500" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="203" cy="500" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <circle cx="140" cy="430" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="140" y="440" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">1</text>
+    </svg>
+  </figure>
+  <ol class="legend">
+    <li><b>Pin 0</b>: det første stik til venstre. Den sorte ledning skal sidde nederst, på den sorte række.</li>
+  </ol>
+  <p>Blokken starter på pin 0, så med pin 0 behøver du ikke at ændre noget. Alle ledige pins virker (se <a href="pins.html">Pins</a>), bare pinnen i blokken passer med den pin, du har sat kablet i.</p>
+</section>
+<section>
+  <h2>Blokkene</h2>
+  <p><b>digital skriv pin</b> ligger i gruppen <b>Pins</b> under <b>Avanceret (Advanced)</b>. <b>for altid</b> (forever) og <b>pause</b> ligger i <b>Grundlæggende (Basic)</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/digital-write.da.svg" alt="Blokken: digital skriv pin P0 til 1"><figcaption><b>digital skriv pin</b>: Sender 1 (tændt) eller 0 (slukket) til pinnen. Klik på P0 for at vælge en anden pin.</figcaption></figure>
+    <figure><img src="../images/blocks/forever.da.svg" alt="Blokken: for altid"><figcaption><b>for altid</b>: Kører blokkene inde i den igen og igen, indtil du stopper micro:bit'en.</figcaption></figure>
+    <figure><img src="../images/blocks/pause.da.svg" alt="Blokken: pause (ms) 100, altså 100 millisekunder"><figcaption><b>pause (ms)</b>: Venter, så du kan nå at se lyset tændt og slukket.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvorfor kun 1 og 0?</h3>
+    <p>En digital pin kender kun to ting: strøm eller ingen strøm. Der er ikke noget midt imellem, så LED'en er enten tændt eller slukket.</p>
+  </aside>
+</section>
+<section>
+  <h2>Små eksempler</h2>
+  <figure class="example"><img src="../images/blocks/ex-led-on.da.svg" alt="Programmet: når programmet starter, digital skriv pin P0 til 1"><figcaption>Tænd LED'en, når micro:bit'en starter.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-led-blink.da.svg" alt="Programmet: for altid, digital skriv pin P0 til 1, pause (ms) 500, digital skriv pin P0 til 0, pause (ms) 500"><figcaption>Blink: tændt i et halvt sekund, slukket i et halvt sekund, igen og igen.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-led-buttons.da.svg" alt="To programmer: når der trykkes på knappen A, digital skriv pin P0 til 1; når der trykkes på knappen B, digital skriv pin P0 til 0"><figcaption>A tænder lyset, og B slukker det.</figcaption></figure>
+</section>
+<section>
+  <h2>Prøv det her</h2>
+  <ol>
+    <li>Få blinket til at gå hurtigere og så langsommere.</li>
+    <li>Flyt LED'en over på pin 1, og ret pinnen i blokken, så den passer.</li>
+    <li>Sæt en LED mere i pin 2, og få de to til at skiftes.</li>
+    <li>Få A til at tænde den og B til at slukke den, og tryk så hurtigt på begge.</li>
+    <li>Sværere: få LED'en til at blinke tre gange, når du trykker på A (brug <b>gentag ... gange</b> (repeat) fra gruppen Løkker (Loops)).</li>
+  </ol>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>LED'en bliver ved med at være slukket.</b> Pinnen i blokken er ikke den pin, du har sat kablet i.</li>
+    <li><b>Der sker stadig ingenting.</b> Tjek, at den sorte ledning sidder på den sorte række. LED'en lyser kun, når den vender rigtigt.</li>
+    <li><b>Den ser aldrig ud til at blinke.</b> Uden <b>pause</b>-blokke tænder og slukker den for hurtigt til, at du kan se det.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <pre>JavaScript:  pins.digitalWritePin(DigitalPin.P0, 1)
+             basic.pause(500)
+
+Python:      pins.digital_write_pin(DigitalPin.P0, 1)
+             basic.pause(500)</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>Det samme på begge. Hold dig fra de pins, som lysene bruger (se <a href="pins.html">Pins</a>).</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> cirka 30 minutter.</li>
+    <li><b>Det lærer de:</b> output, tændt/slukket som 1 og 0, og gentagelse med for altid.</li>
+    <li><b>Tjek:</b> LED-klodserne kører på lav spænding og er sikre at røre ved. De fleste problemer skyldes en forkert pin eller en ledning, der vender forkert.</li>
+    <li>Billederne af blokkene er forenklede tegninger. Tjek de rigtige blokke i MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="pins.html">Pins</a> &middot; <a href="buttons.html">Reager på knapperne</a> &middot; <a href="variables.html">Variabler</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

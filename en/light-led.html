@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Light an LED</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/light-led.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/light-led.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Light an <span>LED</span></h1>
+  <p>Use this when you want to switch a light on and off from your code.</p>
+</header>
+
+<main>
+<section>
+  <h2>What it is</h2>
+  <p>An <b>LED brick</b> is a little light on a small board, with a cable of three wires. You plug the cable into the breakout board, and a block switches the light on and off.</p>
+  <p>A pin can send out a <b>1</b> (on: send power) or a <b>0</b> (off: stop). The block <b>digital write pin</b> does exactly that. The power goes out of the pin, through the LED and back in through the ground wire, the same loop as in the ground box on the introduction page.</p>
+</section>
+<section>
+  <h2>Plug it in</h2>
+  <figure class="labelled narrow">
+    <img src="../images/breakout_board.webp" alt="The breakout board seen from above, with a number marking the plug for pin 0.">
+    <svg viewBox="0 0 800 800" aria-hidden="true">
+      <line x1="140" y1="430" x2="203" y2="500" stroke="#fff" stroke-width="9" stroke-linecap="round"/><line x1="140" y1="430" x2="203" y2="500" stroke="#1f2a44" stroke-width="4" stroke-linecap="round"/><circle cx="203" cy="500" r="8" fill="#ff4d4d" stroke="#fff" stroke-width="3"/>
+      <circle cx="140" cy="430" r="26" fill="#fff" stroke="#1f2a44" stroke-width="5"/><text x="140" y="440" text-anchor="middle" font-size="30" font-weight="700" fill="#1f2a44">1</text>
+    </svg>
+  </figure>
+  <ol class="legend">
+    <li><b>Pin 0</b>: the first plug on the left. The black wire goes on the bottom, black row.</li>
+  </ol>
+  <p>The block starts on pin 0, so with pin 0 you do not have to change anything. Any free pin works (see <a href="pins.html">Pins</a>), as long as the pin in the block matches the pin you plugged into.</p>
+</section>
+<section>
+  <h2>The blocks</h2>
+  <p><b>digital write pin</b> is in the <b>Pins</b> group, under <b>Advanced</b>. <b>forever</b> and <b>pause</b> are in <b>Basic</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/digital-write.en.svg" alt="The block: digital write pin P0 to 1"><figcaption><b>digital write pin</b>: Sends 1 (on) or 0 (off) to the pin. Click the P0 to choose another pin.</figcaption></figure>
+    <figure><img src="../images/blocks/forever.en.svg" alt="The block: forever"><figcaption><b>forever</b>: Runs the blocks inside it again and again, until you stop the micro:bit.</figcaption></figure>
+    <figure><img src="../images/blocks/pause.en.svg" alt="The block: pause 100 milliseconds"><figcaption><b>pause (ms)</b>: Waits, so you can see the light on and off.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why only 1 and 0?</h3>
+    <p>A digital pin only knows two things: power or no power. There is nothing in between, so the LED is either on or off.</p>
+  </aside>
+</section>
+<section>
+  <h2>Mini examples</h2>
+  <figure class="example"><img src="../images/blocks/ex-led-on.en.svg" alt="The program: on start, digital write pin P0 to 1"><figcaption>Switch the LED on when the micro:bit starts.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-led-blink.en.svg" alt="The program: forever, digital write pin P0 to 1, pause 500, digital write pin P0 to 0, pause 500"><figcaption>Blink: on for half a second, off for half a second, again and again.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-led-buttons.en.svg" alt="Two programs: on button A pressed, digital write pin P0 to 1; on button B pressed, digital write pin P0 to 0"><figcaption>A switches the light on and B switches it off.</figcaption></figure>
+</section>
+<section>
+  <h2>Try this</h2>
+  <ol>
+    <li>Make the blink faster, then slower.</li>
+    <li>Move the LED to pin 1 and change the pin in the block to match.</li>
+    <li>Plug in a second LED on pin 2 and make the two take turns.</li>
+    <li>Make A switch it on and B off, then press both quickly.</li>
+    <li>Harder: make the LED blink three times when you press A (use <b>repeat</b> from the Loops group).</li>
+  </ol>
+</section>
+<section>
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><b>The LED stays off.</b> The pin in the block is not the pin you plugged into.</li>
+    <li><b>Still nothing.</b> Check that the black wire is on the black row. The LED only lights one way round.</li>
+    <li><b>It never seems to blink.</b> Without <b>pause</b> blocks it switches on and off too fast to see.</li>
+  </ul>
+</section>
+<section>
+  <h2>The code in words</h2>
+  <pre>JavaScript:  pins.digitalWritePin(DigitalPin.P0, 1)
+             basic.pause(500)
+
+Python:      pins.digital_write_pin(DigitalPin.P0, 1)
+             basic.pause(500)</pre>
+</section>
+<section>
+  <h2>V1 and V2</h2>
+  <p>The same on both. Keep away from the pins the lights use (see <a href="pins.html">Pins</a>).</p>
+</section>
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> about 30 minutes.</li>
+    <li><b>Ideas covered:</b> output, on/off as 1 and 0, and repeating with forever.</li>
+    <li><b>Check:</b> the LED bricks are low voltage and safe to handle. Most problems are a wrong pin or a wire the wrong way round.</li>
+    <li>The block pictures are simplified drawings. Check the real blocks in MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="See also"><b>See also:</b> <a href="pins.html">Pins</a> &middot; <a href="buttons.html">React to the buttons</a> &middot; <a href="variables.html">Variables</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Back to the lessons</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

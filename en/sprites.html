@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sprites</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/sprites.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/sprites.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1><span>Sprites</span></h1>
+  <p>Use this when you want something on the lights that moves, like a game character.</p>
+</header>
+
+<main>
+<section>
+  <h2>What it is</h2>
+  <p>A <b>sprite</b> is a character on the lights: one light that you can move around. It has a place, written (x, y) like on the <a href="index.html#leds">LED grid</a>, and it can move, turn and bump into things. <b>x</b> counts 0 to 4 from left to right, and <b>y</b> counts 0 to 4 from top to bottom. A new sprite faces right.</p>
+  <p>This is how you make games on the micro:bit. The sprite blocks are in the <b>Game</b> group.</p>
+</section>
+<section>
+  <h2>The blocks</h2>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/create-sprite.en.svg" alt="The block: set sprite to create sprite at x 2 y 2"><figcaption><b>create sprite</b>: Makes a sprite at a place and stores it in a variable, so you can talk to it later.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-move.en.svg" alt="The block: sprite move by 1"><figcaption><b>move by</b>: Moves the sprite forward in the direction it faces.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-change.en.svg" alt="The block: sprite change x by 1"><figcaption><b>change x by</b>: Moves the sprite across (x) or down (y). A minus number goes the other way.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-turn.en.svg" alt="The block: sprite turn right by 90 degrees"><figcaption><b>turn</b>: Turns the sprite, so "move by" goes a new way.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-bounce.en.svg" alt="The block: sprite if on edge, bounce"><figcaption><b>if on edge, bounce</b>: Turns the sprite around when it reaches the edge.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-touching.en.svg" alt="The block: sprite is touching food"><figcaption><b>is touching</b>: True when two sprites are on the same light.</figcaption></figure>
+    <figure><img src="../images/blocks/change-score.en.svg" alt="The block: change score by 1"><figcaption><b>change score by</b>: Adds points to the game score.</figcaption></figure>
+    <figure><img src="../images/blocks/score.en.svg" alt="The block: score"><figcaption><b>score</b>: The number of points so far.</figcaption></figure>
+    <figure><img src="../images/blocks/game-over.en.svg" alt="The block: game over"><figcaption><b>game over</b>: Ends the game and shows the score.</figcaption></figure>
+    <figure><img src="../images/blocks/sprite-delete.en.svg" alt="The block: sprite delete"><figcaption><b>delete</b>: Takes the sprite off the lights.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why is the sprite in a variable?</h3>
+    <p>The variable remembers which sprite you mean, so later blocks can say "move this one". You can have several sprites, each in its own box with its own name.</p>
+  </aside>
+</section>
+<section>
+  <h2>Mini examples</h2>
+  <figure class="example"><img src="../images/blocks/ex-sprite-move.en.svg" alt="Three programs: on start, set sprite to create sprite at x 2 y 2; on button A pressed, sprite change x by -1; on button B pressed, sprite change x by 1"><figcaption>A moves the sprite left, B moves it right.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-sprite-bounce.en.svg" alt="Two programs: on start, set sprite to create sprite; forever, sprite move by 1, if on edge bounce, pause 500"><figcaption>The sprite walks across the lights and bounces back from the edge.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-sprite-catch.en.svg" alt="The program: on start, set sprite and set food to create sprite; forever, if sprite is touching food then change score by 1 and set food x to pick random 0 to 4"><figcaption>Score a point, then the food jumps to a new place. The second sprite is called food.</figcaption></figure>
+</section>
+<section>
+  <h2>Try this</h2>
+  <ol>
+    <li>Move the sprite left and right with A and B.</li>
+    <li>Make it bounce along the lights.</li>
+    <li>Add a second sprite called food at a random place, and score when you touch it.</li>
+    <li>Harder: end the game with <b>game over</b> when the score reaches 10.</li>
+  </ol>
+</section>
+<section>
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><b>The sprite does not move.</b> Check which blocks are inside which events. A forever loop needs a <b>pause</b> so you can see it move.</li>
+    <li><b>Touching never happens.</b> Both sprites must exist, and they must be on the same light.</li>
+    <li><b>My sprite vanished.</b> Do not use <b>show</b> blocks while a game runs, because they fight over the lights. Use <b>change score by</b> and <b>game over</b> instead.</li>
+    <li><b>It shows the wrong sprite.</b> A new sprite stored in the same variable replaces the old one.</li>
+  </ul>
+</section>
+<section>
+  <h2>The code in words</h2>
+  <pre>JavaScript:  let sprite = game.createSprite(2, 2)
+             sprite.change(LedSpriteProperty.X, 1)
+             sprite.move(1)
+             sprite.ifOnEdgeBounce()
+             game.addScore(1)
+
+Python:      sprite = game.create_sprite(2, 2)
+             sprite.change(LedSpriteProperty.X, 1)
+             sprite.move(1)
+             sprite.if_on_edge_bounce()
+             game.add_score(1)</pre>
+</section>
+<section>
+  <h2>V1 and V2</h2>
+  <p>The same on both.</p>
+</section>
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> 40 to 60 minutes.</li>
+    <li><b>Ideas covered:</b> objects that have a place and actions, coordinates, collision and score.</li>
+    <li><b>Common confusion:</b> the variable holds the sprite, not a number.</li>
+    <li>The block pictures are simplified drawings. Check the real blocks in MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="See also"><b>See also:</b> <a href="variables.html">Variables</a> &middot; <a href="if-else.html">If and else</a> &middot; <a href="blocks.html">Block cheat sheet</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Back to the lessons</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

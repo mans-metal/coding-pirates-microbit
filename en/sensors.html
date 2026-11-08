@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>More sensors</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/sensors.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/sensors.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>More <span>sensors</span></h1>
+  <p>Use this when you want your micro:bit to notice something in the world.</p>
+</header>
+
+<main>
+<section>
+  <h2>What it is</h2>
+  <p>A <b>sensor</b> is a part that measures something and tells the micro:bit with a number. Some give just 0 or 1 (on or off). Others give a whole range of numbers.</p>
+  <table class="pins">
+    <thead><tr><th>Part</th><th>Kind</th><th>It tells you</th></tr></thead>
+    <tbody>
+      <tr><td>PIR sensor</td><td>On or off</td><td>1 when something warm, like you, moves nearby.</td></tr>
+      <tr><td>Crash sensor</td><td>On or off</td><td>Whether it is being pressed right now.</td></tr>
+      <tr><td>Potentiometer</td><td>A range</td><td>How far the knob is turned, from 0 to 1023.</td></tr>
+      <tr><td>Soil moisture sensor</td><td>A range</td><td>How wet the soil is, as a number.</td></tr>
+      <tr><td>ADKeypad</td><td>A range</td><td>One pin, and each key gives a different number. Use "show it" (below) to find them.</td></tr>
+      <tr><td>Built in: tilt, temperature, light</td><td>A range</td><td>No wires needed. Just use the blocks.</td></tr>
+    </tbody>
+  </table>
+  <p>Plug the part into a pin (see <a href="pins.html">Pins</a>) and read it with the block that matches its kind. The OLED screen needs a MakeCode extension, which the Tinkercademy tutorials explain.</p>
+</section>
+<section>
+  <h2>The blocks</h2>
+  <p><b>digital read pin</b> and <b>analog read pin</b> are in <b>Pins</b>, under <b>Advanced</b>. The built-in ones are in <b>Input</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/digital-read.en.svg" alt="The block: digital read pin P0"><figcaption><b>digital read pin</b>: Reads 0 or 1 from a pin. Use it for the PIR and crash sensors.</figcaption></figure>
+    <figure><img src="../images/blocks/analog-read.en.svg" alt="The block: analog read pin P1"><figcaption><b>analog read pin</b>: Reads a number from 0 to 1023. Use it for the knob and the soil sensor, on pin 0, 1 or 2.</figcaption></figure>
+    <figure><img src="../images/blocks/acceleration.en.svg" alt="The block: acceleration (mg) x"><figcaption><b>acceleration</b>: How hard the micro:bit is being pushed or tilted. x is left and right.</figcaption></figure>
+    <figure><img src="../images/blocks/temperature.en.svg" alt="The block: temperature (degrees C)"><figcaption><b>temperature</b>: A rough temperature, measured by the chip.</figcaption></figure>
+    <figure><img src="../images/blocks/light-level.en.svg" alt="The block: light level"><figcaption><b>light level</b>: How bright it is, from 0 to 255.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Not sure what a sensor says? Show it!</h3>
+    <p>Put the reading into a <b>show number</b> block and watch. Wave a hand, press the sensor, dip only the tip of the soil probe in water (keep the micro:bit and board dry), and see the numbers change. Then pick the number where your program should react.</p>
+  </aside>
+</section>
+<section>
+  <h2>Mini examples</h2>
+  <figure class="example"><img src="../images/blocks/ex-show-value.en.svg" alt="The program: forever, show number digital read pin P0"><figcaption>Show what a sensor reads, to find out how it behaves.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-pir.en.svg" alt="The program: forever, if digital read pin P0 = 1 then show icon yes, else clear screen"><figcaption>A tick when something moves in front of the PIR sensor.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-pot.en.svg" alt="The program: forever, show number analog read pin P1"><figcaption>Turn the knob and watch the number go from 0 up to 1023.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-tilt.en.svg" alt="The program: forever, show number acceleration (mg) x"><figcaption>Tilt the micro:bit left and right and watch the number.</figcaption></figure>
+</section>
+<section>
+  <h2>Try this</h2>
+  <ol>
+    <li>Find out what the PIR reads when you stand still and when you wave.</li>
+    <li>Make a heart appear when the PIR sees you.</li>
+    <li>Find the numbers for dry and wet soil, then make a face that is sad when dry.</li>
+    <li>Tilt the micro:bit to find which way is a negative number.</li>
+  </ol>
+</section>
+<section>
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><b>The number is always 0 or always 1023.</b> Check the pin number. A part that gives a range works best on pin 0, 1 or 2.</li>
+    <li><b>The PIR reacts at strange times.</b> It can need up to a minute after power-on to settle. Wait, then test.</li>
+    <li><b>Light level says 0 at first.</b> Read it again after a moment.</li>
+    <li><b>The reading jumps around.</b> Nothing is connected to that pin, or the cable is loose. If it still jumps, add a <b>set pull</b> block (in <b>Pins</b>, under "... more") in <b>on start</b> to hold the pin steady.</li>
+  </ul>
+</section>
+<section>
+  <h2>The code in words</h2>
+  <pre>JavaScript:  pins.digitalReadPin(DigitalPin.P0)
+             pins.analogReadPin(AnalogPin.P1)
+             input.acceleration(Dimension.X)
+
+Python:      pins.digital_read_pin(DigitalPin.P0)
+             pins.analog_read_pin(AnalogPin.P1)
+             input.acceleration(Dimension.X)</pre>
+</section>
+<section>
+  <h2>V1 and V2</h2>
+  <p>These blocks work on both. The <b>light level</b> block uses the LED lights as a light sensor, so it works best when the lights are not showing a picture.</p>
+</section>
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> 40 to 60 minutes. Each sensor can be its own short activity.</li>
+    <li><b>Ideas covered:</b> measuring, digital versus analog, and finding a good threshold by testing.</li>
+    <li><b>Check on your kit:</b> what each part reads (1 or 0) differs between sensors, which is why the "show it" trick is useful.</li>
+    <li>The block pictures are simplified drawings. Check the real blocks in MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="See also"><b>See also:</b> <a href="pins.html">Pins</a> &middot; <a href="if-else.html">If and else</a> &middot; <a href="sound-movement.html">Sound and movement</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Back to the lessons</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

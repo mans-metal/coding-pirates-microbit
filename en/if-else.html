@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>If and else</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/if-else.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/if-else.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>If and <span>else</span></h1>
+  <p>Use this when your micro:bit has to choose what to do.</p>
+</header>
+
+<main>
+<section>
+  <h2>What it is</h2>
+  <p>Sometimes your micro:bit has to choose. <b>if ... then ... else</b> is a fork in the road: if something is <b>true</b>, the blocks in <b>then</b> run. If it is not, the blocks in <b>else</b> run.</p>
+  <p>The "something" is a question with a yes or no answer, called a <b>condition</b>. Is button A pressed? Is the score bigger than 4? The blocks with pointed ends are conditions.</p>
+</section>
+<section>
+  <h2>The blocks</h2>
+  <p>These are in the <b>Logic</b> group, except <b>button A is pressed</b>, which is in <b>Input</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/if-else.en.svg" alt="The block: if true then, else"><figcaption><b>if ... then ... else</b>: Runs one set of blocks or the other. Click the + on the block to add more choices.</figcaption></figure>
+    <figure><img src="../images/blocks/button-pressed.en.svg" alt="The block: button A is pressed"><figcaption><b>button A is pressed</b>: True while the button is held down.</figcaption></figure>
+    <figure><img src="../images/blocks/compare.en.svg" alt="The block: 0 = 0"><figcaption><b>0 = 0</b>: Compares two values. Click the sign to pick &lt;, &gt; or others.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Why put it in forever?</h3>
+    <p>An <b>if</b> only checks once, when the micro:bit reaches it. Inside <b>forever</b> it checks again and again, so it notices when things change.</p>
+  </aside>
+</section>
+<section>
+  <h2>Mini examples</h2>
+  <figure class="example"><img src="../images/blocks/ex-if-button.en.svg" alt="The program: forever, if button A is pressed then show icon heart, else clear screen"><figcaption>Show a heart while A is held down, and nothing otherwise.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-if-score.en.svg" alt="The program: on button A pressed, change score by 1, if score > 4 then show icon happy else show icon sad"><figcaption>After each press of A you see a sad face, until the fifth press makes it happy.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-magic-ball.en.svg" alt="The program: on shake, set answer to pick random 0 to 1, if answer = 0 then show icon yes else show icon no"><figcaption>A magic ball: shake it and it says yes or no.</figcaption></figure>
+</section>
+<section>
+  <h2>Try this</h2>
+  <ol>
+    <li>Make the heart example and hold A.</li>
+    <li>Change the 4 to another number and see what changes.</li>
+    <li>Make the magic ball give three answers, using the + on the if block and <b>pick random 0 to 2</b>.</li>
+    <li>Harder: light an LED while a button is held (see <a href="light-led.html">Light an LED</a>).</li>
+  </ol>
+</section>
+<section>
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><b>Nothing changes.</b> The if is in <b>on start</b>, so it only checks once. Move it into <b>forever</b>.</li>
+    <li><b>The condition will not fit.</b> Conditions are the blocks with pointed ends. Round blocks are values, and they do not fit there.</li>
+    <li><b>It says "=" but I wanted "bigger than".</b> Click the sign in the compare block to change it.</li>
+  </ul>
+</section>
+<section>
+  <h2>The code in words</h2>
+  <pre>JavaScript:  if (input.buttonIsPressed(Button.A)) {
+                 basic.showIcon(IconNames.Heart)
+             } else {
+                 basic.clearScreen()
+             }
+
+Python:      if input.button_is_pressed(Button.A):
+                 basic.show_icon(IconNames.HEART)
+             else:
+                 basic.clear_screen()</pre>
+</section>
+<section>
+  <h2>V1 and V2</h2>
+  <p>The same on both.</p>
+</section>
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> 30 to 40 minutes.</li>
+    <li><b>Ideas covered:</b> conditions (true or false), choosing between two paths, and checking again and again.</li>
+    <li><b>Common confusion:</b> an if inside on start only runs once.</li>
+    <li>The block pictures are simplified drawings. Check the real blocks in MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="See also"><b>See also:</b> <a href="variables.html">Variables</a> &middot; <a href="sensors.html">More sensors</a> &middot; <a href="buttons.html">React to the buttons</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Back to the lessons</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

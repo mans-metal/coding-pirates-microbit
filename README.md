@@ -2,7 +2,9 @@
 
 A friendly, printable guide to the BBC micro:bit, made for kids aged 10-14 and the Coding Pirates volunteers who teach them.
 
-Kids write their programs in [MakeCode](https://makecode.microbit.org/), snapping blocks together much like in Scratch. This project covers the basics: what the board and the kit parts are, how to read the LED grid, and how to start coding. The first lessons and reference pages are ready, and more are on the way: variables, logic, sprites and finished projects.
+Kids write their programs in [MakeCode](https://makecode.microbit.org/), snapping blocks together much like in Scratch. This project covers the basics: what the board and the kit parts are, how to read the LED grid, and how to start coding. Parts 1 and 2 are ready. Part 3, finished projects, is next.
+
+**Live site:** https://mans-metal.github.io/coding-pirates-microbit/
 
 ![Screen preview](docs/preview-screen.png)
 
@@ -12,10 +14,10 @@ Kids write their programs in [MakeCode](https://makecode.microbit.org/), snappin
 - **The kit:** photos with numbered labels for every part in the Tinkercademy micro:bit Tinker Kit (micro:bit V1), plus the breakout board.
 - **Little "light bulb" boxes:** short, plain explanations for things kids always ask, like why there is a Ground and what the gold pins are for.
 - **Teacher notes:** a few handy facts at the end.
-- **Lessons and reference pages:** show an icon, show words and numbers, react to the buttons, and a pins guide, each with block pictures, examples and teacher notes.
+- **Lessons and reference pages:** Part 1 (basics: icons, text, buttons, pins, LEDs, variables) and Part 2 (being creative: if/else, sensors, sound and movement, sprites), each with block pictures, examples, common mistakes and teacher notes, plus a one-page block cheat sheet.
 - **Two languages:** English and Danish.
 
-Coming next: lighting an LED, variables, if/else logic, sensors, sprites, and projects like a music machine, a smart light and a simple snake game.
+Coming next: projects like a music machine, a smart light and a simple snake game.
 
 ## Using it
 
@@ -47,9 +49,10 @@ Each language is a folder with the same pages, for example `en/show-icon.html` a
 
 - `index.html`: language picker
 - `en/index.html`, `da/index.html`: the introduction in English and Danish
-- `en/*.html`, `da/*.html`: the lessons and reference pages, one file per page and language (`show-icon`, `show-text`, `buttons`, `pins`)
+- `en/*.html`, `da/*.html`: the lessons and reference pages, one file per page and language (`show-icon`, `show-text`, `buttons`, `pins`, `light-led`, `variables`, `if-else`, `sensors`, `sound-movement`, `sprites`, and the `blocks` cheat sheet)
 - `tools/blocks.py`: draws the block pictures in `images/blocks/`
 - `tests/`: automatic checks
+- `TODO.md`: things to check in real MakeCode
 - `style.css`: the styles, shared by both languages
 - `images/`: photos and screenshots
 - `docs/`: the preview pictures in this README

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variabler</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/variables.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/variables.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1><span>Variabler</span></h1>
+  <p>Brug det her, når din micro:bit skal huske noget, for eksempel en score.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p>En <b>variabel</b> er en kasse med et navneskilt, og den kan holde på én ting, for eksempel et tal. Du giver kassen et navn, som <b>score</b>, og lægger en værdi i den. Senere kan du kigge i kassen eller lægge en ny værdi i.</p>
+  <p>Sådan husker din micro:bit ting, mens programmet kører.</p>
+</section>
+<section>
+  <h2>Blokkene</h2>
+  <p>Klik på <b>Variabler (Variables)</b> og så på <b>Make a Variable...</b>, skriv et navn, og klik på OK. Dine blokke dukker op nedenunder.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/set-variable.da.svg" alt="Blokken: sæt score til 0"><figcaption><b>sæt score til 0</b> (set score to 0): Lægger en værdi i kassen. Den erstatter det, der lå der før.</figcaption></figure>
+    <figure><img src="../images/blocks/change-variable.da.svg" alt="Blokken: ændr score af 1"><figcaption><b>ændr score af 1</b> (change score by 1): Lægger til det, der er i kassen. Brug et minustal for at trække fra.</figcaption></figure>
+    <figure><img src="../images/blocks/variable.da.svg" alt="Blokken: score"><figcaption><b>score</b>: Giver dig værdien i kassen. Træk den ind i en hvilken som helst blok, der tager en værdi.</figcaption></figure>
+    <figure><img src="../images/blocks/pick-random.da.svg" alt="Blokken: vælg tilfældig fra 0 til 10"><figcaption><b>vælg tilfældig fra 0 til 10</b> (pick random 0 to 10): Et tal, som tilfældet vælger (i gruppen Matematik (Math)). Begge ender kan komme op, så 0 til 10 kan give både 0 og 10. Perfekt til terninger.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Sæt eller ændr?</h3>
+    <p><b>sæt</b> lægger en ny værdi i og glemmer den gamle. <b>ændr</b> lægger til den gamle. Hvis der ligger 12 i kassen, giver sæt til 5 tallet 5, og ændr af 5 giver 17.</p>
+  </aside>
+</section>
+<section>
+  <h2>Små eksempler</h2>
+  <figure class="example"><img src="../images/blocks/ex-counter.da.svg" alt="To programmer: når programmet starter, sæt score til 0; når der trykkes på knappen A, ændr score af 1 og vis nummer score"><figcaption>Tæl knaptryk. Hvert tryk lægger 1 til og viser så tallet.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-reset.da.svg" alt="Programmet: når der trykkes på knappen B, sæt score til 0 og vis nummer score"><figcaption>B sætter scoren tilbage til 0.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-dice.da.svg" alt="Programmet: når der trykkes på knappen A, sæt dice til vælg tilfældig fra 1 til 6, vis nummer dice"><figcaption>Et terningkast: et nyt tal fra 1 til 6 hver gang.</figcaption></figure>
+</section>
+<section>
+  <h2>Prøv det her</h2>
+  <ol>
+    <li>Lav tælleren ovenfor, og tryk på A ti gange.</li>
+    <li>Tilføj B, så den nulstiller scoren.</li>
+    <li>Lav en terning, der viser et tal fra 1 til 6.</li>
+    <li>Sværere: vis et hjerte, når scoren når 10 (se <a href="if-else.html">Hvis og ellers</a>).</li>
+  </ol>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>Den viser ordet "score".</b> Du har brugt <b>vis streng</b> (show string) og skrevet ordet ind. Træk i stedet <b>score</b>-blokken ind i <b>vis nummer</b> (show number).</li>
+    <li><b>Scoren hopper til det forkerte tal.</b> Du har brugt <b>sæt</b>, hvor du ville bruge <b>ændr</b>.</li>
+    <li><b>To kasser med næsten det samme navn.</b> "score" og "Score" er to forskellige variabler.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <pre>JavaScript:  let score = 0
+             score += 1
+             basic.showNumber(score)
+
+Python:      score = 0
+             score += 1
+             basic.show_number(score)</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>Det samme på begge.</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> 30 til 40 minutter.</li>
+    <li><b>Det lærer de:</b> at navngive, gemme og ændre en værdi, og tilfældige tal.</li>
+    <li><b>Typisk misforståelse:</b> sæt over for ændr, og variabelblokken over for det indtastede ord.</li>
+    <li>Billederne af blokkene er forenklede tegninger. Tjek de rigtige blokke i MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="buttons.html">Reager på knapperne</a> &middot; <a href="if-else.html">Hvis og ellers</a> &middot; <a href="show-text.html">Vis ord og tal</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lyd og bevægelse</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Sprog: Dansk</summary>
+  <ul>
+    <li><a href="../en/sound-movement.html" hreflang="en" lang="en">English</a></li>
+    <li><a href="../da/sound-movement.html" hreflang="da" lang="da" aria-current="page">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Lyd og <span>bevægelse</span></h1>
+  <p>Brug det her, når din micro:bit skal lave en lyd eller flytte noget.</p>
+</header>
+
+<main>
+<section>
+  <h2>Hvad er det?</h2>
+  <p><b>Lyd:</b> en summer laver lyd ved at ryste luften meget hurtigt. Hver tone er et bestemt antal rystelser i sekundet. Blokken <b>afspil tone</b> (play tone) vælger tonen, og hvor længe den varer.</p>
+  <p><b>Bevægelse:</b> en <b>servo</b> er en lille motor, der drejer sin arm hen til en vinkel og holder den der. Blokken <b>servo skriv pin</b> (servo write pin) bestemmer vinklen.</p>
+</section>
+<section>
+  <h2>Sæt den i</h2>
+  <ul>
+    <li><b>Passiv summer:</b> sæt den i pin 0. På en V1 kommer lyden ud af pin 0.</li>
+    <li><b>Mini-servo:</b> sæt den i pin 1. Den sorte eller brune ledning skal sidde på den sorte række (G), og den røde ledning i midten. Drej ikke armen med hånden: så kan du ødelægge tandhjulene inden i.</li>
+  </ul>
+  <p>En servo kan bruge meget strøm. Hvis micro:bit'en starter forfra eller opfører sig mærkeligt, så prøv batteripakken.</p>
+</section>
+<section>
+  <h2>Blokkene</h2>
+  <p><b>afspil tone</b> og <b>rest</b> ligger i <b>Musik (Music)</b>. <b>servo skriv pin</b> ligger i <b>Pins</b> under <b>Avanceret (Advanced)</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/play-tone.da.svg" alt="Blokken: afspil tone Middel C i 1 beat"><figcaption><b>afspil tone</b>: Spiller en tone i et stykke tid. Klik på tonen eller på taktslaget (beat) for at ændre dem. Et taktslag er ét slag i musikken, ligesom ét klap. Ved normal fart varer 1 taktslag et halvt sekund.</figcaption></figure>
+    <figure><img src="../images/blocks/rest.da.svg" alt="Blokken: rest for 1 beat"><figcaption><b>rest</b>: Er stille et stykke tid, så tonerne ikke flyder sammen.</figcaption></figure>
+    <figure><img src="../images/blocks/servo-write.da.svg" alt="Blokken: servo skriv pin P1 til 90"><figcaption><b>servo skriv pin</b>: Drejer servoarmen hen til en vinkel fra 0 til 180.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Hvad er en vinkel på 90?</h3>
+    <p>Forestil dig, at armen fejer rundt i en halv cirkel. 0 er helt ude i den ene side, 180 er helt ude i den anden side, og 90 er lige i midten.</p>
+  </aside>
+</section>
+<section>
+  <h2>Små eksempler</h2>
+  <figure class="example"><img src="../images/blocks/ex-tone.da.svg" alt="Programmet: når der trykkes på knappen A, afspil tone Middel C i 1 beat"><figcaption>Tryk på A for at spille én tone.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-melody.da.svg" alt="Programmet: når der trykkes på knappen A, afspil tone Middel C, afspil tone D, afspil tone E, hver i 1 beat"><figcaption>Tre toner i træk, der går opad.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-servo.da.svg" alt="To programmer: når der trykkes på knappen A, servo skriv pin P1 til 0; når der trykkes på knappen B, servo skriv pin P1 til 180"><figcaption>A drejer armen den ene vej og B den anden.</figcaption></figure>
+</section>
+<section>
+  <h2>Prøv det her</h2>
+  <ol>
+    <li>Spil de første fire toner af en sang, du kender.</li>
+    <li>Sæt en <b>rest</b> ind mellem to toner.</li>
+    <li>Få servoen til at vinke: 0, 180, 0 med pauser imellem.</li>
+    <li>Sværere: spil en tone, hver gang servoen flytter sig.</li>
+  </ol>
+</section>
+<section>
+  <h2>Typiske fejl</h2>
+  <ul>
+    <li><b>Ingen lyd.</b> På en V1 skal summeren sidde i pin 0. Tjek stikket og ledningernes farver.</li>
+    <li><b>Servoen rykker, eller micro:bit'en starter forfra.</b> Servoen bruger måske mere strøm, end micro:bit'en kan give. Prøv batteripakken.</li>
+    <li><b>Servoen bevæger sig ikke.</b> Tjek, at den sorte eller brune ledning sidder på den sorte række (G), og at pinnen i blokken passer.</li>
+  </ul>
+</section>
+<section>
+  <h2>Koden skrevet som tekst</h2>
+  <pre>JavaScript:  music.playTone(262, music.beat(BeatFraction.Whole))
+             pins.servoWritePin(AnalogPin.P1, 90)
+
+Python:      music.play_tone(262, music.beat(BeatFraction.WHOLE))
+             pins.servo_write_pin(AnalogPin.P1, 90)</pre>
+</section>
+<section>
+  <h2>V1 og V2</h2>
+  <p>En V2 har sin egen højttaler, så lyden kommer også ud af den. <span class="badge">Kun V2</span> Blokken <b>indstil indbygget højttaler</b> (set built-in speaker) slukker for den, hvis du kun vil bruge summeren.</p>
+</section>
+<section class="teacher">
+  <h2>Lærernoter</h2>
+  <ul>
+    <li><b>Tid:</b> 40 til 60 minutter.</li>
+    <li><b>Det lærer de:</b> lyd som tal, pauser og timing, vinkler.</li>
+    <li><b>Tjek på jeres kit:</b> at summeren spiller på pin 0, og om servoen kan køre på strøm fra USB eller skal have batteripakken.</li>
+    <li>Billederne af blokkene er forenklede tegninger. Tjek de rigtige blokke i MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="Se også"><b>Se også:</b> <a href="buttons.html">Reager på knapperne</a> &middot; <a href="pins.html">Pins</a> &middot; <a href="sensors.html">Flere sensorer</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Tilbage til lektionerne</a></p>
+
+</main>
+
+<footer>Kod online på <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>

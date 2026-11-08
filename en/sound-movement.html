@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sound and movement</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<details class="lang">
+  <summary>Language: English</summary>
+  <ul>
+    <li><a href="../en/sound-movement.html" hreflang="en" lang="en" aria-current="page">English</a></li>
+    <li><a href="../da/sound-movement.html" hreflang="da" lang="da">Dansk</a></li>
+  </ul>
+</details>
+
+<header class="hero">
+  <h1>Sound and <span>movement</span></h1>
+  <p>Use this when you want your micro:bit to make a sound or move something.</p>
+</header>
+
+<main>
+<section>
+  <h2>What it is</h2>
+  <p><b>Sound:</b> a buzzer makes sound by shaking the air very fast. Each note is a number of shakes per second. The <b>play tone</b> block picks the note and how long it lasts.</p>
+  <p><b>Movement:</b> a <b>servo</b> is a small motor that turns its arm to an angle and holds it there. The block <b>servo write pin</b> sets the angle.</p>
+</section>
+<section>
+  <h2>Plug it in</h2>
+  <ul>
+    <li><b>Passive buzzer:</b> plug it into pin 0. On a V1, sound comes out of pin 0.</li>
+    <li><b>Mini servo:</b> plug it into pin 1. The black or brown wire goes on the black (G) row and the red wire in the middle. Do not turn the arm by hand: you can break its gears.</li>
+  </ul>
+  <p>A servo can use a lot of power. If the micro:bit restarts or acts strangely, try the battery pack.</p>
+</section>
+<section>
+  <h2>The blocks</h2>
+  <p><b>play tone</b> and <b>rest</b> are in <b>Music</b>. <b>servo write pin</b> is in <b>Pins</b>, under <b>Advanced</b>.</p>
+  <div class="blockcards">
+    <figure><img src="../images/blocks/play-tone.en.svg" alt="The block: play tone Middle C for 1 beat"><figcaption><b>play tone</b>: Plays a note for a length of time. Click the note or the beat to change them. A beat is one count of the music, like one clap. At the normal speed, 1 beat is half a second.</figcaption></figure>
+    <figure><img src="../images/blocks/rest.en.svg" alt="The block: rest for 1 beat"><figcaption><b>rest</b>: Stays quiet for a while, so notes do not run together.</figcaption></figure>
+    <figure><img src="../images/blocks/servo-write.en.svg" alt="The block: servo write pin P1 to 90"><figcaption><b>servo write pin</b>: Turns the servo arm to an angle from 0 to 180.</figcaption></figure>
+  </div>
+  <aside class="know">
+    <h3><svg class="bulb" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21h6M10 18h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> What is an angle of 90?</h3>
+    <p>Think of the arm sweeping like a half circle. 0 is all the way to one side, 180 is all the way to the other side, and 90 is straight in the middle.</p>
+  </aside>
+</section>
+<section>
+  <h2>Mini examples</h2>
+  <figure class="example"><img src="../images/blocks/ex-tone.en.svg" alt="The program: on button A pressed, play tone Middle C for 1 beat"><figcaption>Press A to play one note.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-melody.en.svg" alt="The program: on button A pressed, play tone Middle C, play tone D, play tone E, each for 1 beat"><figcaption>Three notes in a row, going up.</figcaption></figure>
+  <figure class="example"><img src="../images/blocks/ex-servo.en.svg" alt="Two programs: on button A pressed, servo write pin P1 to 0; on button B pressed, servo write pin P1 to 180"><figcaption>A turns the arm one way and B the other.</figcaption></figure>
+</section>
+<section>
+  <h2>Try this</h2>
+  <ol>
+    <li>Play the first four notes of a song you know.</li>
+    <li>Put a <b>rest</b> between two notes.</li>
+    <li>Make the servo wave: 0, 180, 0 with pauses between.</li>
+    <li>Harder: play a note every time the servo moves.</li>
+  </ol>
+</section>
+<section>
+  <h2>Common mistakes</h2>
+  <ul>
+    <li><b>No sound.</b> On a V1 the buzzer must be on pin 0. Check the plug and the wire colours.</li>
+    <li><b>The servo twitches or the micro:bit restarts.</b> The servo may be using more power than the micro:bit can give. Try the battery pack.</li>
+    <li><b>The servo does not move.</b> Check that the black or brown wire is on the black (G) row, and that the pin in the block matches.</li>
+  </ul>
+</section>
+<section>
+  <h2>The code in words</h2>
+  <pre>JavaScript:  music.playTone(262, music.beat(BeatFraction.Whole))
+             pins.servoWritePin(AnalogPin.P1, 90)
+
+Python:      music.play_tone(262, music.beat(BeatFraction.WHOLE))
+             pins.servo_write_pin(AnalogPin.P1, 90)</pre>
+</section>
+<section>
+  <h2>V1 and V2</h2>
+  <p>A V2 has its own speaker, so the sound comes out of that too. <span class="badge">V2 only</span> The block <b>set built-in speaker</b> switches it off if you only want the buzzer.</p>
+</section>
+<section class="teacher">
+  <h2>Teacher notes</h2>
+  <ul>
+    <li><b>Time:</b> 40 to 60 minutes.</li>
+    <li><b>Ideas covered:</b> sound as numbers, rests and timing, angles.</li>
+    <li><b>Check on your kit:</b> that the buzzer plays on pin 0 and that the servo runs on USB power or needs the battery pack.</li>
+    <li>The block pictures are simplified drawings. Check the real blocks in MakeCode.</li>
+  </ul>
+</section>
+<nav class="seealso" aria-label="See also"><b>See also:</b> <a href="buttons.html">React to the buttons</a> &middot; <a href="pins.html">Pins</a> &middot; <a href="sensors.html">More sensors</a></nav>
+
+<p class="back"><a href="index.html#lessons">&larr; Back to the lessons</a></p>
+
+</main>
+
+<footer>Code online at <a href="https://makecode.microbit.org">makecode.microbit.org</a></footer>
+</body>
+</html>
