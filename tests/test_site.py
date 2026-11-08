@@ -185,6 +185,23 @@ class Safety(unittest.TestCase):
             self.assertIsNone(SVG_FORBIDDEN.search(svg.read_text(encoding="utf-8")), svg.name)
 
 
+class HeadTags(unittest.TestCase):
+    def test_every_page_has_viewport_csp_and_referrer_tags(self):
+        """The viewport tag makes pages fit phones; the other two tighten security."""
+        for p in all_pages():
+            text = p.read_text(encoding="utf-8")
+            self.assertIn('<meta name="viewport" content="width=device-width, initial-scale=1">', text, p)
+            self.assertIn("default-src 'none'", text, p)
+            self.assertIn('<meta name="referrer" content="no-referrer">', text, p)
+
+    def test_no_inline_styles_or_style_tags(self):
+        """The security policy blocks inline styles, so pages must not use them."""
+        for p in all_pages():
+            text = p.read_text(encoding="utf-8")
+            self.assertNotIn("<style", text, p)
+            self.assertNotRegex(text, r'\sstyle\s*=', p)
+
+
 class BlockPictures(unittest.TestCase):
     def test_pictures_are_up_to_date(self):
         want = blocks.build()

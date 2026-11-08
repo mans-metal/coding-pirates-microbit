@@ -18,13 +18,8 @@ The site is plain HTML and CSS: no build step, no dependencies. Any static host 
 
 - [ ] Once you know the address, add `<link rel="alternate" hreflang="en" href="https://.../en/">` style tags (full URLs) to the `<head>` of each page, one per language, so search engines link the versions.
 
-## Hardening (optional)
+## Hardening
 
-Add inside `<head>` of every page (`index.html`, `en/index.html`, `da/index.html`). The page has no scripts, fonts or inline styles, so this should not break anything; check by opening the hosted page.
-
-```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
-<meta name="referrer" content="no-referrer">
-```
+Every page already carries a Content-Security-Policy tag (it blocks scripts, forms and anything loaded from outside) and a no-referrer tag. A test checks this. If you add a page, copy the two `<meta>` lines from an existing page. Do not add inline styles or scripts, because the policy blocks them.
 
 If you add `target="_blank"` to any link, also add `rel="noopener noreferrer"`.
